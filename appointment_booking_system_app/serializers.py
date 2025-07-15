@@ -1,4 +1,4 @@
-"""Serializers for appointment booking system."""
+"""Serializers for an appointment booking system."""
 from django.contrib.auth.hashers import make_password
 from django.core.exceptions import ValidationError
 from rest_framework import serializers

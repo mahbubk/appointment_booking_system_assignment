@@ -80,7 +80,6 @@ pydocstyle==6.3.0
 pyflakes==3.1.0
 Pygments==2.19.1
 PyJWT==2.9.0
-pylibmc==1.6.3
 pylint==3.3.4
 pymemcache==4.0.0
 pypandoc==1.15

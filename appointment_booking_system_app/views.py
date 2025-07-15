@@ -542,7 +542,7 @@ class UserViewSet(viewsets.ViewSet):
         )
 
     @staticmethod
-    @CustomJWTAuthentication.jwt_authenticated
+    # @CustomJWTAuthentication.jwt_authenticated
     @handle_exceptions
     def create(request) -> Response:
         """
