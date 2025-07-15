@@ -26,7 +26,6 @@ class Time(models.Model):
     :param updated_by: The user who last updated the record.
     """
 
-    objects = None
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.CharField(max_length=50, default="dev")
     updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
@@ -94,7 +93,7 @@ class User(Time):
         ("PATIENT", "Patient"),
     ]
 
-    full_name = models.TextField()
+    fullname = models.TextField()
     password = models.TextField()
     email = models.EmailField(unique=True, db_index=True)
     phone = models.TextField(unique=True, db_index=True, max_length=14)
@@ -118,11 +117,9 @@ class User(Time):
         default=True
     )  # True for active user and False for inactive user
 
-
-
     def __str__(self):
         """Return a human-readable string representation of the model instance."""
-        return str(self.full_name)
+        return str(self.fullname)
 
 
 class Token(Time):

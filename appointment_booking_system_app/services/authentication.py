@@ -12,6 +12,7 @@ from typing import Any, Dict, Union
 import bcrypt
 import jwt
 import psycopg2
+from django.contrib.auth.hashers import check_password
 from django.core.exceptions import ObjectDoesNotExist
 from user_agents import parse
 
@@ -49,7 +50,7 @@ class Authentication:
 
         payload = {
             "user_id": user.id,
-            "username": user.username,
+            "username": user.fullname,
             "exp": datetime.datetime.now(datetime.timezone.utc)
             + datetime.timedelta(days=0, hours=24, minutes=0, seconds=0),
             "iat": datetime.datetime.now(datetime.timezone.utc),
@@ -74,7 +75,7 @@ class Authentication:
 
         payload = {
             "user_id": user.id,
-            "username": user.username,
+            "username": user.fullname,
             "exp": datetime.datetime.now(datetime.timezone.utc)
             + datetime.timedelta(days=7, hours=0, minutes=0, seconds=0),
             "iat": datetime.datetime.now(datetime.timezone.utc),
@@ -148,9 +149,18 @@ class Authentication:
         Returns:
             bool: True if the password is correct, False otherwise.
         """
-        return bcrypt.checkpw(
+        result = bcrypt.checkpw(
             raw_password.encode("utf-8"), stored_password.encode("utf-8")
         )
+        print(result)
+        return result
+
+    def verify_password(stored_password: str, raw_password: str) -> bool:
+        """
+        Verify a password using Django's built-in password checking
+        (works with all supported Django hashing algorithms)
+        """
+        return check_password(raw_password, stored_password)
 
     @staticmethod
     def get_browser_fingerprint(request) -> Dict[str, Union[str, None]]:
