@@ -5,25 +5,36 @@ from django.utils import timezone
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 
-from appointment_booking_system_app.db_cache import DbCache
-from appointment_booking_system_app.models import District, Division, Thana, Token
-from appointment_booking_system_app.repository.user import user_service
-from appointment_booking_system_app.serializers import (
-    DistrictSerializer,
-    DivisionSerializer,
-    ThanaSerializer,
-    UserLoginSerializer,
-    UserSerializer,
-)
-from appointment_booking_system_app.services.authentication import Authentication
-from appointment_booking_system_app.services.custom_jwt_authentication import (
-    CustomJWTAuthentication,
-)
-from appointment_booking_system_app.services.user_login import authenticate_user
 from utils.api_utils import ApiUtils
 from utils.exception_handler import handle_exceptions
 from utils.responses import Responses
 from utils.strings import ResponseMessages
+from .db_cache import DbCache
+from .models import (
+    District,
+    Division,
+    DoctorProfile,
+    Specialization,
+    Thana,
+    Token,
+    TimeSlot,
+    Appointment,
+)
+from .repository.user import user_service
+from .serializers import (
+    DistrictSerializer,
+    DivisionSerializer,
+    DoctorProfileSerializer,
+    SpecializationSerializer,
+    ThanaSerializer,
+    UserLoginSerializer,
+    UserSerializer,
+    TimeSlotSerializer,
+    AppointmentSerializer,
+)
+from .services.authentication import Authentication
+from .services.custom_jwt_authentication import AllowAnyCustom, CustomJWTAuthentication
+from .services.user_login import authenticate_user
 
 db_cache = DbCache()
 auth = Authentication()
@@ -542,6 +553,7 @@ class UserViewSet(viewsets.ViewSet):
         )
 
     @staticmethod
+    # After user creation, you can uncomment the below line
     # @CustomJWTAuthentication.jwt_authenticated
     @handle_exceptions
     def create(request) -> Response:
@@ -680,11 +692,12 @@ class UserSessionManagementViewSet(viewsets.ViewSet):
 
     Methods:
         login(request): Authenticates a user using username/email/phone and password,
-                        and returns access and refresh tokens.
-        logout(request): Invalidates the user's access token, effectively logging the user out.
+                        and return access and refresh tokens.
+        Logout(request): Invalidates the user's access token, effectively logging the user out.
     """
 
     @staticmethod
+    @AllowAnyCustom.allow_any
     def login(request):
         """
         Handle user login and token generation.
@@ -786,3 +799,661 @@ class UserSessionManagementViewSet(viewsets.ViewSet):
                 ),
                 status=status.HTTP_401_UNAUTHORIZED,
             )
+
+
+class SpecializationViewSet(viewsets.ViewSet):
+    """
+    A ViewSet for handling CRUD Specialization operations.
+    """
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def list(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Retrieve a list of all Specialization instances.
+
+        Returns:
+            Response: A response containing serialized Specialization instances.
+        """
+        specializations = Specialization.objects.all()  # pylint: disable=no-member
+
+        serializer = SpecializationSerializer(specializations, many=True)  # type: ignore
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def create(request) -> Response:
+        """
+        Create a new instance.
+
+        Args:
+            request: The HTTP request containing data for the new instance.
+
+        Returns:
+            Response: A response containing serialized data of the created instance.
+        """
+        serializer = SpecializationSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def retrieve(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        retrieve details of a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to retrieve.
+
+        Returns:
+            Response: A response containing serialized
+            data of the requested instance.
+        """
+        specialization_obj = Specialization.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not specialization_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = SpecializationSerializer(specialization_obj)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def partial_update(request, pk: int) -> Response:
+        """
+        partially update details of a specific instance.
+
+        Args:
+            request: The HTTP request containing partially updated data.
+            pk (int): The primary key of the instance to partially update.
+
+        Returns:
+            Response: A response containing serialized
+            data of the partially updated instance.
+        """
+        specialization_obj = Specialization.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not specialization_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = SpecializationSerializer(
+            specialization_obj, data=request.data, partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_200_OK,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def destroy(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        delete it a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to delete.
+
+        Returns:
+            Response: A response indicating the success of the deletion.
+        """
+        specialization_obj = Specialization.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not specialization_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        Specialization.objects.get(pk=pk).delete()  # pylint: disable=no-member
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.DELETE_SUCCESSFUL.value
+            ),
+            status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class DoctorProfileViewSet(viewsets.ViewSet):
+    """
+    A ViewSet for handling CRUD DoctorProfile operations.
+    """
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def list(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Retrieve a list of all Specialization instances.
+
+        Returns:
+            Response: A response containing serialized Specialization instances.
+        """
+        doctor_profiles = DoctorProfile.objects.all()  # pylint: disable=no-member
+
+        serializer = DoctorProfileSerializer(doctor_profiles, many=True)  # type: ignore
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def create(request) -> Response:
+        """
+        Create a new instance.
+
+        Args:
+            request: The HTTP request containing data for the new instance.
+
+        Returns:
+            Response: A response containing serialized data of the created instance.
+        """
+        serializer = DoctorProfileSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def retrieve(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        retrieve details of a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to retrieve.
+
+        Returns:
+            Response: A response containing serialized
+            data of the requested instance.
+        """
+        doctor_profile_obj = DoctorProfile.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not doctor_profile_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = DoctorProfileSerializer(doctor_profile_obj)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def partial_update(request, pk: int) -> Response:
+        """
+        partially update details of a specific instance.
+
+        Args:
+            request: The HTTP request containing partially updated data.
+            pk (int): The primary key of the instance to partially update.
+
+        Returns:
+            Response: A response containing serialized
+            data of the partially updated instance.
+        """
+        doctor_profile_obj = DoctorProfile.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not doctor_profile_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = DoctorProfileSerializer(
+            doctor_profile_obj, data=request.data, partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_200_OK,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def destroy(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        delete it a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to delete.
+
+        Returns:
+            Response: A response indicating the success of the deletion.
+        """
+        doctor_profile_obj = DoctorProfile.objects.get(
+            pk=pk
+        )  # pylint: disable=no-member
+
+        if not doctor_profile_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        DoctorProfile.objects.get(pk=pk).delete()  # pylint: disable=no-member
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.DELETE_SUCCESSFUL.value
+            ),
+            status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class TimeSlotViewSet(viewsets.ViewSet):
+    """
+    A ViewSet for handling CRUD TimeSlot operations for Doctors.
+    """
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def list(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Retrieve a list of all instances.
+
+        Returns:
+            Response: A response containing serialized instances.
+        """
+        timeslots = TimeSlot.objects.all()  # pylint: disable=no-member
+
+        serializer = TimeSlotSerializer(timeslots, many=True)  # type: ignore
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def create(request) -> Response:
+        """
+        Create a new instance.
+
+        Args:
+            request: The HTTP request containing data for the new instance.
+
+        Returns:
+            Response: A response containing serialized data of the created instance.
+        """
+        serializer = TimeSlotSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def retrieve(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        retrieve details of a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to retrieve.
+
+        Returns:
+            Response: A response containing serialized
+            data of the requested instance.
+        """
+        time_slot_obj = TimeSlot.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not time_slot_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = TimeSlotSerializer(time_slot_obj)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def partial_update(request, pk: int) -> Response:
+        """
+        partially update details of a specific instance.
+
+        Args:
+            request: The HTTP request containing partially updated data.
+            pk (int): The primary key of the instance to partially update.
+
+        Returns:
+            Response: A response containing serialized
+            data of the partially updated instance.
+        """
+        time_slot_obj = TimeSlot.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not time_slot_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = TimeSlotSerializer(time_slot_obj, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_200_OK,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def destroy(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        delete it a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to delete.
+
+        Returns:
+            Response: A response indicating the success of the deletion.
+        """
+        time_slot_obj = TimeSlot.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not time_slot_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        TimeSlot.objects.get(pk=pk).delete()  # pylint: disable=no-member
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.DELETE_SUCCESSFUL.value
+            ),
+            status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class AppointmentViewSet(viewsets.ViewSet):
+    """
+    A ViewSet for handling CRUD Appointments.
+    """
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def list(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Retrieve a list of all instances.
+
+        Returns:
+            Response: A response containing serialized instances.
+        """
+        appointments = Appointment.objects.all()  # pylint: disable=no-member
+
+        serializer = AppointmentSerializer(appointments, many=True)  # type: ignore
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def create(request) -> Response:
+        """
+        Create a new instance.
+
+        Args:
+            request: The HTTP request containing data for the new instance.
+
+        Returns:
+            Response: A response containing serialized data of the created instance.
+        """
+        serializer = AppointmentSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def retrieve(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        retrieve details of a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to retrieve.
+
+        Returns:
+            Response: A response containing serialized
+            data of the requested instance.
+        """
+        appointment_obj = Appointment.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not appointment_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = AppointmentSerializer(appointment_obj)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def partial_update(request, pk: int) -> Response:
+        """
+        partially update details of a specific instance.
+
+        Args:
+            request: The HTTP request containing partially updated data.
+            pk (int): The primary key of the instance to partially update.
+
+        Returns:
+            Response: A response containing serialized
+            data of the partially updated instance.
+        """
+        appointment_obj = Appointment.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not appointment_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = AppointmentSerializer(
+            appointment_obj, data=request.data, partial=True
+        )
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                    data=serializer.data,
+                ),
+                status=status.HTTP_200_OK,
+            )
+        return Response(
+            data=Responses.error_response(message=serializer.errors),
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def destroy(request, pk: int) -> Response:  # pylint: disable=unused-argument
+        """
+        delete it a specific instance.
+
+        Args:
+            request: The HTTP request.
+            pk (int): The primary key of the instance to delete.
+
+        Returns:
+            Response: A response indicating the success of the deletion.
+        """
+        appointment_obj = Appointment.objects.get(pk=pk)  # pylint: disable=no-member
+
+        if not appointment_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        Appointment.objects.get(pk=pk).delete()  # pylint: disable=no-member
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.DELETE_SUCCESSFUL.value
+            ),
+            status=status.HTTP_204_NO_CONTENT,
+        )

@@ -44,7 +44,7 @@ class Time(models.Model):
         abstract = True
 
 
-class Division(models.Model):
+class Division(Time):
     """Represents a top-level administrative division (e.g., a state or province)."""
 
     name = models.TextField()
@@ -54,7 +54,7 @@ class Division(models.Model):
         return str(self.name)
 
 
-class District(models.Model):
+class District(Time):
     """Represents a subdivision within a Division."""
 
     name = models.TextField()
@@ -62,12 +62,17 @@ class District(models.Model):
         Division, on_delete=models.SET_NULL, null=True, blank=True
     )
 
+    # pylint: disable=too-few-public-methods
+    class Meta:
+        """division with district"""
+
+        unique_together = ("division", "name")
+
     def __str__(self):
-        """Return a human-readable string representation of the model instance."""
-        return str(self.name)
+        return f"{self.name}, {self.division}"
 
 
-class Thana(models.Model):
+class Thana(Time):
     """Represents a police precinct within a District."""
 
     name = models.TextField()
@@ -75,9 +80,14 @@ class Thana(models.Model):
         District, on_delete=models.SET_NULL, null=True, blank=True
     )
 
+    # pylint: disable=too-few-public-methods
+    class Meta:
+        """District with thana"""
+
+        unique_together = ("district", "name")
+
     def __str__(self):
-        """Return a human-readable string representation of the model instance."""
-        return str(self.name)
+        return f"{self.name}, {self.district}"
 
 
 class User(Time):
@@ -109,10 +119,11 @@ class User(Time):
         District, on_delete=models.SET_NULL, null=True, blank=True
     )
     thana = models.ForeignKey(Thana, on_delete=models.SET_NULL, null=True, blank=True)
-    license_number = models.TextField(blank=True)
-    total_experience = models.TextField(blank=True)
-    consultation_fee = models.TextField(blank=True)
-    availability = models.TimeField(blank=True, null=True, default=None)
+    license_number = models.CharField(max_length=50, unique=True, null=True, blank=True)
+    experience_years = models.CharField(blank=True, null=True)
+    consultation_fee = models.DecimalField(
+        max_digits=10, decimal_places=2, default=0.00
+    )
     is_active = models.BooleanField(
         default=True
     )  # True for active user and False for inactive user
@@ -120,6 +131,146 @@ class User(Time):
     def __str__(self):
         """Return a human-readable string representation of the model instance."""
         return str(self.fullname)
+
+
+class Specialization(Time):
+    """Doctor Specialization"""
+
+    name = models.CharField(max_length=100, unique=True)
+    description = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    # pylint: disable=too-few-public-methods
+    class Meta:
+        """Specialization  Name"""
+
+        ordering = ["name"]
+
+    def __str__(self):
+        return str(self.name)
+
+
+class DoctorProfile(Time):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
+    specialization = models.ForeignKey(
+        Specialization, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    bio = models.TextField(blank=True)
+    location = models.CharField(max_length=255, blank=True)
+    is_available = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"Dr. {self.user.fullname}"
+
+
+class TimeSlot(Time):
+    WEEKDAY_CHOICES = [
+        (0, "Friday"),
+        (1, "Saturday"),
+        (2, "Sunday"),
+        (3, "Monday"),
+        (4, "Wednesday"),
+        (5, "Thursday"),
+        (6, "Sunday"),
+    ]
+
+    doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
+    weekday = models.IntegerField(choices=WEEKDAY_CHOICES)
+    start_time = models.TimeField()
+    end_time = models.TimeField()
+
+    class Meta:
+        unique_together = ["doctor", "weekday", "start_time", "end_time"]
+        ordering = ["weekday", "start_time"]
+
+
+class Appointment(Time):
+    STATUS_CHOICES = [
+        ("pending", "Pending"),
+        ("confirmed", "Confirmed"),
+        ("cancelled", "Cancelled"),
+        ("completed", "Completed"),
+    ]
+
+    patient = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+    )
+    doctor = models.ForeignKey(
+        DoctorProfile,
+        on_delete=models.CASCADE,
+    )
+    appointment_date = models.DateField()
+    appointment_time = models.TimeField()
+    notes = models.TextField(blank=True, help_text="Symptoms or notes")
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="pending")
+
+    consultation_fee = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True
+    )
+
+    class Meta:
+        ordering = ["-appointment_date", "-appointment_time"]
+        unique_together = ["doctor", "appointment_date", "appointment_time"]
+
+    def __str__(self):
+        return (
+            f"{self.patient.fullname} -> Dr. {self.doctor.user.fullname} "
+            f"on {self.appointment_date}"
+        )
+
+
+class AppointmentStatusLog(Time):
+    """Track appointment status changes"""
+
+    appointment = models.ForeignKey(
+        Appointment,
+        on_delete=models.CASCADE,
+    )
+    previous_status = models.CharField(max_length=10, blank=True)
+    new_status = models.CharField(max_length=10)
+    changed_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    reason = models.TextField(blank=True)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.appointment.booking_reference}: {self.previous_status} -> {self.new_status}"
+
+    class Meta:
+        ordering = ["-timestamp"]
+
+
+class MonthlyReport(Time):
+    """Monthly reports for doctors"""
+
+    doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
+    year = models.IntegerField()
+    month = models.IntegerField()
+    total_appointments = models.IntegerField(default=0)
+    total_patients = models.IntegerField(default=0)
+    total_earnings = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+
+    def __str__(self):
+        return f"Dr. {self.doctor.user.fullname} - {self.year}-{self.month:02d}"
+
+    class Meta:
+        unique_together = ["doctor", "year", "month"]
+        ordering = ["-year", "-month"]
+
+
+class AppointmentReminder(models.Model):
+    """Track appointment reminders"""
+
+    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
+    reminder_type = models.CharField(max_length=20, default="24_hours")
+    sent_at = models.DateTimeField(auto_now_add=True)
+    is_sent = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = ["appointment", "reminder_type"]
 
 
 class Token(Time):
