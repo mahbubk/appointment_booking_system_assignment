@@ -1,0 +1,5 @@
+[WARNING] 2025-07-17 09:08:26,301 request_logger (38): GET / → 404
+[WARNING] 2025-07-17 09:08:26,302 django.request (248): Not Found: /
+[WARNING] 2025-07-17 09:08:26,303 django.server (213): "GET / HTTP/1.1" 404 2821
+[WARNING] 2025-07-17 09:08:26,415 request_logger (38): GET /favicon.ico → 404
+[WARNING] 2025-07-17 09:08:26,417 django.request (248): Not Found: /favicon.ico

@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-
+import logging
 import os
 from pathlib import Path
 
@@ -56,6 +56,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # custom middleware
+    "middleware.log_requests.RequestLoggingMiddleware",
 ]
 
 PASSWORD_HASHERS = [
@@ -144,3 +146,117 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+CALLBACK_FILTER = "django.utils.log.CallbackFilter"
+FILE_HANDLER = "logging.FileHandler"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "[{levelname}] {asctime} {name} ({lineno}): {message}",
+            "style": "{",
+        },
+        "colored": {
+            "()": "colorlog.ColoredFormatter",
+            "format": "%(log_color)s[%(levelname)s] %(asctime)s %(name)s: %(message)s",
+        },
+    },
+    "filters": {
+        "require_debug": {
+            "()": CALLBACK_FILTER,
+            "callback": lambda record: record.levelno == logging.DEBUG,
+        },
+        "require_info": {
+            "()": CALLBACK_FILTER,
+            "callback": lambda record: record.levelno == logging.INFO,
+        },
+        "require_warning": {
+            "()": CALLBACK_FILTER,
+            "callback": lambda record: record.levelno == logging.WARNING,
+        },
+        "require_error": {
+            "()": CALLBACK_FILTER,
+            "callback": lambda record: record.levelno == logging.ERROR,
+        },
+        "exc_info_to_file": {"()": "middleware.log_exceptions.ExcInfoToFileFilter"},
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "colored",
+        },
+        "debug_file": {
+            "class": FILE_HANDLER,
+            "filename": os.path.join(BASE_DIR, "logs/debug.log"),
+            "formatter": "verbose",
+            "filters": ["require_debug"],
+        },
+        "info_file": {
+            "class": FILE_HANDLER,
+            "filename": os.path.join(BASE_DIR, "logs/info.log"),
+            "formatter": "verbose",
+            "filters": ["require_info"],
+        },
+        "warning_file": {
+            "class": FILE_HANDLER,
+            "filename": os.path.join(BASE_DIR, "logs/warning.log"),
+            "formatter": "verbose",
+            "filters": ["require_warning"],
+        },
+        "error_file": {
+            "class": FILE_HANDLER,
+            "filename": os.path.join(BASE_DIR, "logs/error.log"),
+            "formatter": "verbose",
+            "filters": ["require_error", "exc_info_to_file"],
+        },
+    },
+    "loggers": {
+        "": {
+            "handlers": [
+                "console",
+                "debug_file",
+                "info_file",
+                "warning_file",
+                "error_file",
+            ],
+            "level": "DEBUG",
+            "propagate": False,
+        },
+        "django": {
+            "handlers": [
+                "console",
+                "debug_file",
+                "info_file",
+                "warning_file",
+                "error_file",
+            ],
+            "level": "INFO",
+            "propagate": False,
+        },
+        "recruiting_app": {
+            "handlers": [
+                "console",
+                "debug_file",
+                "info_file",
+                "warning_file",
+                "error_file",
+            ],
+            "level": "DEBUG",
+            "propagate": False,
+        },
+        "request_logger": {
+            "handlers": [
+                "console",
+                "debug_file",
+                "info_file",
+                "warning_file",
+                "error_file",
+            ],
+            "level": "INFO",
+            "propagate": False,
+        },
+    },
+}

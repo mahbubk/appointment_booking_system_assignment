@@ -800,6 +800,53 @@ class UserSessionManagementViewSet(viewsets.ViewSet):
                 status=status.HTTP_401_UNAUTHORIZED,
             )
 
+class AccessTokenFromRefreshToken(viewsets.ViewSet):
+    """View for generating a new access token from a refresh token."""
+
+    @staticmethod
+    @handle_exceptions
+    def create(request):
+        """
+        generate a new access token from a refresh token.
+
+        Args:
+            request: The HTTP request.
+        Returns:
+            Response: The response containing
+            the new access token or an error message.
+        """
+        fingerprint = auth.get_browser_fingerprint(request)
+
+        refresh_token = request.headers.get("Refresh-Token")
+        refresh_token_exists, expired = ApiUtils.is_refresh_token_expired(refresh_token)
+        if expired or refresh_token_exists is False:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.REFRESH_TOKEN_EXPIRED.value
+                ),
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        try:
+            (
+                new_access_token,
+                new_refresh_token,
+            ) = auth.create_access_token_from_refresh_token(refresh_token, fingerprint)
+            data = {
+                "refresh_token": new_refresh_token,
+                "access_token": new_access_token,
+            }
+            return Response(
+                data=Responses.success_response(
+                    message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=data
+                ),
+                status=status.HTTP_201_CREATED,
+            )
+        except ValueError as exe:
+            return Response(
+                data=Responses.error_response(message=str(exe)),
+                status=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            )
+
 
 class SpecializationViewSet(viewsets.ViewSet):
     """

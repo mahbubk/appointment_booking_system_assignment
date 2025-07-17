@@ -172,10 +172,12 @@ class TimeSlot(Time):
         (1, "Saturday"),
         (2, "Sunday"),
         (3, "Monday"),
-        (4, "Wednesday"),
-        (5, "Thursday"),
-        (6, "Sunday"),
+        (4, "Tuesday"),
+        (5, "Wednesday"),
+        (6, "Thursday"),
     ]
+
+
 
     doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
     weekday = models.IntegerField(choices=WEEKDAY_CHOICES)
@@ -237,7 +239,7 @@ class AppointmentStatusLog(Time):
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.appointment.booking_reference}: {self.previous_status} -> {self.new_status}"
+        return f"{self.appointment}: {self.previous_status} -> {self.new_status}"
 
     class Meta:
         ordering = ["-timestamp"]

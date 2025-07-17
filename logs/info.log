@@ -1,0 +1,5 @@
+[INFO] 2025-07-17 09:08:19,616 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 09:08:33,642 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-17 09:08:33,644 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-17 09:08:33,904 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-17 09:08:33,906 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13481

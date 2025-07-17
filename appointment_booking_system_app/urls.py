@@ -11,7 +11,7 @@ from appointment_booking_system_app.views import (
     ThanaViewSet,
     UserSessionManagementViewSet,
     UserViewSet,
-    TimeSlotViewSet,
+    TimeSlotViewSet, AppointmentViewSet, AccessTokenFromRefreshToken,
 )
 
 urlpatterns = [
@@ -176,6 +176,11 @@ urlpatterns = [
         name="user_logout",
     ),
     path(
+        "refresh/token/",
+        AccessTokenFromRefreshToken.as_view({"post": "create"}),
+        name="refresh_token",
+    ),
+    path(
         "time/slot/list/",
         TimeSlotViewSet.as_view({"get": "list"}),
         name="time-slot-list",
@@ -199,6 +204,31 @@ urlpatterns = [
         "time/slot/<int:pk>/delete/",
         TimeSlotViewSet.as_view({"delete": "destroy"}),
         name="time-slot-delete",
+    ),
+    path(
+        "appointment/list/",
+        AppointmentViewSet.as_view({"get": "list"}),
+        name="appointment-slot-list",
+    ),
+    path(
+        "appointment/create/",
+        AppointmentViewSet.as_view({"post": "create"}),
+        name="appointment-slot-create",
+    ),
+    path(
+        "appointment/<int:pk>/",
+        AppointmentViewSet.as_view({"get": "retrieve"}),
+        name="appointment-slot-retrieve",
+    ),
+    path(
+        "appointment/<int:pk>/partial/update/",
+        AppointmentViewSet.as_view({"patch": "partial_update"}),
+        name="appointment-slot-partial-update",
+    ),
+    path(
+        "appointment/<int:pk>/delete/",
+        AppointmentViewSet.as_view({"delete": "destroy"}),
+        name="appointment-slot-delete",
     ),
 ]
 
