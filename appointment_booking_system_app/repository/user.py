@@ -1,6 +1,6 @@
 """
 This module defines the repository and service classes for managing
-Skills data access and operations in the financial application.
+Skills data access and operations.
 
 It includes:
 - GenericRepository: A generic repository for handling CRUD operations
@@ -46,13 +46,13 @@ class UserRepository(GenericRepository[User]):
 class UserService(GenericService[User]):
     """
     Service class responsible for handling business logic and operations
-    related to Users instances, utilizing the repository layer for
+    related to Users instances, using the repository layer for
     database interactions.
 
     This class provides a layer of abstraction over the repository, allowing
     for the enforcement of additional validation rules, data transformations,
     and other business logic. It is designed to be used by application
-    components that require access to Users data while abstracting away
+    components that require access to Users' data while abstracting away
     direct database operations.
 
     Key Responsibilities:

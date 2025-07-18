@@ -1,0 +1,228 @@
+[DEBUG] 2025-07-17 16:37:12,517 PIL.Image (405): Importing BlpImagePlugin
+[DEBUG] 2025-07-17 16:37:12,521 PIL.Image (405): Importing BmpImagePlugin
+[DEBUG] 2025-07-17 16:37:12,522 PIL.Image (405): Importing BufrStubImagePlugin
+[DEBUG] 2025-07-17 16:37:12,524 PIL.Image (405): Importing CurImagePlugin
+[DEBUG] 2025-07-17 16:37:12,525 PIL.Image (405): Importing DcxImagePlugin
+[DEBUG] 2025-07-17 16:37:12,527 PIL.Image (405): Importing DdsImagePlugin
+[DEBUG] 2025-07-17 16:37:12,545 PIL.Image (405): Importing EpsImagePlugin
+[DEBUG] 2025-07-17 16:37:12,548 PIL.Image (405): Importing FitsImagePlugin
+[DEBUG] 2025-07-17 16:37:12,549 PIL.Image (405): Importing FliImagePlugin
+[DEBUG] 2025-07-17 16:37:12,550 PIL.Image (405): Importing FpxImagePlugin
+[DEBUG] 2025-07-17 16:37:12,552 PIL.Image (408): Image: failed to import FpxImagePlugin: No module named 'olefile'
+[DEBUG] 2025-07-17 16:37:12,553 PIL.Image (405): Importing FtexImagePlugin
+[DEBUG] 2025-07-17 16:37:12,554 PIL.Image (405): Importing GbrImagePlugin
+[DEBUG] 2025-07-17 16:37:12,557 PIL.Image (405): Importing GifImagePlugin
+[DEBUG] 2025-07-17 16:37:12,558 PIL.Image (405): Importing GribStubImagePlugin
+[DEBUG] 2025-07-17 16:37:12,559 PIL.Image (405): Importing Hdf5StubImagePlugin
+[DEBUG] 2025-07-17 16:37:12,560 PIL.Image (405): Importing IcnsImagePlugin
+[DEBUG] 2025-07-17 16:37:12,563 PIL.Image (405): Importing IcoImagePlugin
+[DEBUG] 2025-07-17 16:37:12,565 PIL.Image (405): Importing ImImagePlugin
+[DEBUG] 2025-07-17 16:37:12,567 PIL.Image (405): Importing ImtImagePlugin
+[DEBUG] 2025-07-17 16:37:12,569 PIL.Image (405): Importing IptcImagePlugin
+[DEBUG] 2025-07-17 16:37:12,571 PIL.Image (405): Importing JpegImagePlugin
+[DEBUG] 2025-07-17 16:37:12,571 PIL.Image (405): Importing Jpeg2KImagePlugin
+[DEBUG] 2025-07-17 16:37:12,572 PIL.Image (405): Importing McIdasImagePlugin
+[DEBUG] 2025-07-17 16:37:12,574 PIL.Image (405): Importing MicImagePlugin
+[DEBUG] 2025-07-17 16:37:12,576 PIL.Image (408): Image: failed to import MicImagePlugin: No module named 'olefile'
+[DEBUG] 2025-07-17 16:37:12,577 PIL.Image (405): Importing MpegImagePlugin
+[DEBUG] 2025-07-17 16:37:12,578 PIL.Image (405): Importing MpoImagePlugin
+[DEBUG] 2025-07-17 16:37:12,618 PIL.Image (405): Importing MspImagePlugin
+[DEBUG] 2025-07-17 16:37:12,620 PIL.Image (405): Importing PalmImagePlugin
+[DEBUG] 2025-07-17 16:37:12,621 PIL.Image (405): Importing PcdImagePlugin
+[DEBUG] 2025-07-17 16:37:12,622 PIL.Image (405): Importing PcxImagePlugin
+[DEBUG] 2025-07-17 16:37:12,624 PIL.Image (405): Importing PdfImagePlugin
+[DEBUG] 2025-07-17 16:37:12,687 PIL.Image (405): Importing PixarImagePlugin
+[DEBUG] 2025-07-17 16:37:12,689 PIL.Image (405): Importing PngImagePlugin
+[DEBUG] 2025-07-17 16:37:12,690 PIL.Image (405): Importing PpmImagePlugin
+[DEBUG] 2025-07-17 16:37:12,692 PIL.Image (405): Importing PsdImagePlugin
+[DEBUG] 2025-07-17 16:37:12,693 PIL.Image (405): Importing QoiImagePlugin
+[DEBUG] 2025-07-17 16:37:12,695 PIL.Image (405): Importing SgiImagePlugin
+[DEBUG] 2025-07-17 16:37:12,696 PIL.Image (405): Importing SpiderImagePlugin
+[DEBUG] 2025-07-17 16:37:12,697 PIL.Image (405): Importing SunImagePlugin
+[DEBUG] 2025-07-17 16:37:12,698 PIL.Image (405): Importing TgaImagePlugin
+[DEBUG] 2025-07-17 16:37:12,699 PIL.Image (405): Importing TiffImagePlugin
+[DEBUG] 2025-07-17 16:37:12,700 PIL.Image (405): Importing WebPImagePlugin
+[DEBUG] 2025-07-17 16:37:12,745 PIL.Image (405): Importing WmfImagePlugin
+[DEBUG] 2025-07-17 16:37:12,747 PIL.Image (405): Importing XbmImagePlugin
+[DEBUG] 2025-07-17 16:37:12,752 PIL.Image (405): Importing XpmImagePlugin
+[DEBUG] 2025-07-17 16:37:12,755 PIL.Image (405): Importing XVThumbImagePlugin
+[DEBUG] 2025-07-17 17:10:39,539 PIL.Image (405): Importing BlpImagePlugin
+[DEBUG] 2025-07-17 17:10:39,542 PIL.Image (405): Importing BmpImagePlugin
+[DEBUG] 2025-07-17 17:10:39,543 PIL.Image (405): Importing BufrStubImagePlugin
+[DEBUG] 2025-07-17 17:10:39,544 PIL.Image (405): Importing CurImagePlugin
+[DEBUG] 2025-07-17 17:10:39,545 PIL.Image (405): Importing DcxImagePlugin
+[DEBUG] 2025-07-17 17:10:39,547 PIL.Image (405): Importing DdsImagePlugin
+[DEBUG] 2025-07-17 17:10:39,573 PIL.Image (405): Importing EpsImagePlugin
+[DEBUG] 2025-07-17 17:10:39,577 PIL.Image (405): Importing FitsImagePlugin
+[DEBUG] 2025-07-17 17:10:39,578 PIL.Image (405): Importing FliImagePlugin
+[DEBUG] 2025-07-17 17:10:39,580 PIL.Image (405): Importing FpxImagePlugin
+[DEBUG] 2025-07-17 17:10:39,582 PIL.Image (408): Image: failed to import FpxImagePlugin: No module named 'olefile'
+[DEBUG] 2025-07-17 17:10:39,583 PIL.Image (405): Importing FtexImagePlugin
+[DEBUG] 2025-07-17 17:10:39,585 PIL.Image (405): Importing GbrImagePlugin
+[DEBUG] 2025-07-17 17:10:39,587 PIL.Image (405): Importing GifImagePlugin
+[DEBUG] 2025-07-17 17:10:39,588 PIL.Image (405): Importing GribStubImagePlugin
+[DEBUG] 2025-07-17 17:10:39,589 PIL.Image (405): Importing Hdf5StubImagePlugin
+[DEBUG] 2025-07-17 17:10:39,591 PIL.Image (405): Importing IcnsImagePlugin
+[DEBUG] 2025-07-17 17:10:39,594 PIL.Image (405): Importing IcoImagePlugin
+[DEBUG] 2025-07-17 17:10:39,596 PIL.Image (405): Importing ImImagePlugin
+[DEBUG] 2025-07-17 17:10:39,598 PIL.Image (405): Importing ImtImagePlugin
+[DEBUG] 2025-07-17 17:10:39,601 PIL.Image (405): Importing IptcImagePlugin
+[DEBUG] 2025-07-17 17:10:39,602 PIL.Image (405): Importing JpegImagePlugin
+[DEBUG] 2025-07-17 17:10:39,603 PIL.Image (405): Importing Jpeg2KImagePlugin
+[DEBUG] 2025-07-17 17:10:39,604 PIL.Image (405): Importing McIdasImagePlugin
+[DEBUG] 2025-07-17 17:10:39,605 PIL.Image (405): Importing MicImagePlugin
+[DEBUG] 2025-07-17 17:10:39,608 PIL.Image (408): Image: failed to import MicImagePlugin: No module named 'olefile'
+[DEBUG] 2025-07-17 17:10:39,608 PIL.Image (405): Importing MpegImagePlugin
+[DEBUG] 2025-07-17 17:10:39,610 PIL.Image (405): Importing MpoImagePlugin
+[DEBUG] 2025-07-17 17:10:39,628 PIL.Image (405): Importing MspImagePlugin
+[DEBUG] 2025-07-17 17:10:39,630 PIL.Image (405): Importing PalmImagePlugin
+[DEBUG] 2025-07-17 17:10:39,632 PIL.Image (405): Importing PcdImagePlugin
+[DEBUG] 2025-07-17 17:10:39,634 PIL.Image (405): Importing PcxImagePlugin
+[DEBUG] 2025-07-17 17:10:39,635 PIL.Image (405): Importing PdfImagePlugin
+[DEBUG] 2025-07-17 17:10:39,669 PIL.Image (405): Importing PixarImagePlugin
+[DEBUG] 2025-07-17 17:10:39,672 PIL.Image (405): Importing PngImagePlugin
+[DEBUG] 2025-07-17 17:10:39,673 PIL.Image (405): Importing PpmImagePlugin
+[DEBUG] 2025-07-17 17:10:39,674 PIL.Image (405): Importing PsdImagePlugin
+[DEBUG] 2025-07-17 17:10:39,676 PIL.Image (405): Importing QoiImagePlugin
+[DEBUG] 2025-07-17 17:10:39,677 PIL.Image (405): Importing SgiImagePlugin
+[DEBUG] 2025-07-17 17:10:39,678 PIL.Image (405): Importing SpiderImagePlugin
+[DEBUG] 2025-07-17 17:10:39,679 PIL.Image (405): Importing SunImagePlugin
+[DEBUG] 2025-07-17 17:10:39,681 PIL.Image (405): Importing TgaImagePlugin
+[DEBUG] 2025-07-17 17:10:39,682 PIL.Image (405): Importing TiffImagePlugin
+[DEBUG] 2025-07-17 17:10:39,683 PIL.Image (405): Importing WebPImagePlugin
+[DEBUG] 2025-07-17 17:10:39,685 PIL.Image (405): Importing WmfImagePlugin
+[DEBUG] 2025-07-17 17:10:39,687 PIL.Image (405): Importing XbmImagePlugin
+[DEBUG] 2025-07-17 17:10:39,693 PIL.Image (405): Importing XpmImagePlugin
+[DEBUG] 2025-07-17 17:10:39,695 PIL.Image (405): Importing XVThumbImagePlugin
+[DEBUG] 2025-07-18 12:02:29,466 celery.utils.functional (335): 
+def xstarmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,467 celery.utils.functional (335): 
+def generate_monthly_reports():
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,467 celery.utils.functional (335): 
+def accumulate(self, *args, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,468 celery.utils.functional (335): 
+def send_daily_appointment_reminders():
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,469 celery.utils.functional (335): 
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,469 celery.utils.functional (335): 
+def chunks(task, it, n):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,470 celery.utils.functional (335): 
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,470 celery.utils.functional (335): 
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,471 celery.utils.functional (335): 
+def xmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,471 celery.utils.functional (335): 
+def backend_cleanup():
+    return 1
+
+[DEBUG] 2025-07-18 12:02:29,472 celery.utils.functional (335): 
+def chain(*args, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,103 celery.utils.functional (335): 
+def xstarmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,103 celery.utils.functional (335): 
+def accumulate(self, *args, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,104 celery.utils.functional (335): 
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,104 celery.utils.functional (335): 
+def chunks(task, it, n):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,105 celery.utils.functional (335): 
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,105 celery.utils.functional (335): 
+def generate_monthly_reports():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,106 celery.utils.functional (335): 
+def send_daily_appointment_reminders():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,106 celery.utils.functional (335): 
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,107 celery.utils.functional (335): 
+def xmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,107 celery.utils.functional (335): 
+def backend_cleanup():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:07,108 celery.utils.functional (335): 
+def chain(*args, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,654 celery.utils.functional (335): 
+def xstarmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,654 celery.utils.functional (335): 
+def accumulate(self, *args, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,654 celery.utils.functional (335): 
+def generate_monthly_reports():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,655 celery.utils.functional (335): 
+def send_daily_appointment_reminders():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,655 celery.utils.functional (335): 
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,656 celery.utils.functional (335): 
+def chunks(task, it, n):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,657 celery.utils.functional (335): 
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,657 celery.utils.functional (335): 
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,658 celery.utils.functional (335): 
+def xmap(task, it):
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,658 celery.utils.functional (335): 
+def backend_cleanup():
+    return 1
+
+[DEBUG] 2025-07-18 12:05:38,659 celery.utils.functional (335): 
+def chain(*args, **kwargs):
+    return 1
+

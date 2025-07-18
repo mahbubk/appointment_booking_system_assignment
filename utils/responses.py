@@ -19,8 +19,8 @@ class Responses:
         Generates a success response dictionary with specified parameters.
         Args:
             is_success (bool): A flag indicating whether the response is a success or failure.
-            message (str): An optional message providing additional information.
-            data (dict): Additional data to include in the response.
+            Message (str): An optional message providing additional information.
+            Data (dict): Additional data to include in the response.
         Returns:
             dict: The success response dictionary.
         """
@@ -32,7 +32,7 @@ class Responses:
         Generates an error response dictionary with specified parameters.
         Args:
             is_success (bool): A flag indicating whether the response is a success or failure.
-            message (str): An optional error message providing details about the failure.
+            Message (str): An optional error message providing details about the failure.
         Returns:
             dict: The error response dictionary.
         """
@@ -46,8 +46,8 @@ class Responses:
         Generates a general response dictionary with specified parameters.
         Args:
             is_success (bool): A flag indicating whether the response is a success or failure.
-            message (str): An optional message providing additional information.
-            data (dict): Additional data to include in the response.
+            Message (str): An optional message providing additional information.
+            Data (dict): Additional data to include in the response.
         Returns:
             dict: The response dictionary.
         """

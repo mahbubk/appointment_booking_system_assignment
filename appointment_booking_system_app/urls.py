@@ -4,14 +4,17 @@ from django.conf.urls.static import static
 from django.urls import path
 
 from appointment_booking_system_app.views import (
+    AccessTokenFromRefreshToken,
+    AppointmentViewSet,
     DistrictViewSet,
     DivisionViewSet,
     DoctorProfileViewSet,
     SpecializationViewSet,
     ThanaViewSet,
+    TimeSlotViewSet,
     UserSessionManagementViewSet,
     UserViewSet,
-    TimeSlotViewSet, AppointmentViewSet, AccessTokenFromRefreshToken,
+    AppointmentReportViewSet,
 )
 
 urlpatterns = [
@@ -206,6 +209,11 @@ urlpatterns = [
         name="time-slot-delete",
     ),
     path(
+        "user/specific/appointments/",
+        DoctorProfileViewSet.as_view({"get": "user_specific_appointments"}),
+        name="user-specific-appointments",
+    ),
+    path(
         "appointment/list/",
         AppointmentViewSet.as_view({"get": "list"}),
         name="appointment-slot-list",
@@ -229,6 +237,26 @@ urlpatterns = [
         "appointment/<int:pk>/delete/",
         AppointmentViewSet.as_view({"delete": "destroy"}),
         name="appointment-slot-delete",
+    ),
+    path(
+        "filter/doctors/",
+        DoctorProfileViewSet.as_view({"get": "filter_doctors"}),
+        name="filter-doctors",
+    ),
+    path(
+        "filter/appointments/",
+        DoctorProfileViewSet.as_view({"get": "filtered_appointments"}),
+        name="filtered-appointments",
+    ),
+    path(
+        "appointments/reminder/",
+        AppointmentReportViewSet.as_view({"get": "appointment_reminders_list"}),
+        name="appointments-reminder",
+    ),
+    path(
+        "appointments/monthly/reports/",
+        AppointmentReportViewSet.as_view({"get": "appointment_monthly_reports_list"}),
+        name="appointments-monthly-reports",
     ),
 ]
 

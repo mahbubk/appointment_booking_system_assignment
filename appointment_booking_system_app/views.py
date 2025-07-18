@@ -11,26 +11,30 @@ from utils.responses import Responses
 from utils.strings import ResponseMessages
 from .db_cache import DbCache
 from .models import (
+    Appointment,
     District,
     Division,
-    DoctorProfile,
     Specialization,
     Thana,
-    Token,
     TimeSlot,
-    Appointment,
+    Token,
+    AppointmentReminder,
+    MonthlyReport,
 )
+from .repository.doctor_profile import doctor_profile_service
 from .repository.user import user_service
 from .serializers import (
+    AppointmentSerializer,
     DistrictSerializer,
     DivisionSerializer,
     DoctorProfileSerializer,
     SpecializationSerializer,
     ThanaSerializer,
+    TimeSlotSerializer,
     UserLoginSerializer,
     UserSerializer,
-    TimeSlotSerializer,
-    AppointmentSerializer,
+    AppointmentReminderSerializer,
+    MonthlyReportSerializer,
 )
 from .services.authentication import Authentication
 from .services.custom_jwt_authentication import AllowAnyCustom, CustomJWTAuthentication
@@ -800,6 +804,7 @@ class UserSessionManagementViewSet(viewsets.ViewSet):
                 status=status.HTTP_401_UNAUTHORIZED,
             )
 
+
 class AccessTokenFromRefreshToken(viewsets.ViewSet):
     """View for generating a new access token from a refresh token."""
 
@@ -1018,7 +1023,9 @@ class SpecializationViewSet(viewsets.ViewSet):
 
 class DoctorProfileViewSet(viewsets.ViewSet):
     """
-    A ViewSet for handling CRUD DoctorProfile operations.
+    A ViewSet for handling CRUD DoctorProfile operations and
+    Filter doctors by specialization, availability, and location.
+    And Filter appointments by date range, status, and doctor
     """
 
     @staticmethod
@@ -1031,7 +1038,7 @@ class DoctorProfileViewSet(viewsets.ViewSet):
         Returns:
             Response: A response containing serialized Specialization instances.
         """
-        doctor_profiles = DoctorProfile.objects.all()  # pylint: disable=no-member
+        doctor_profiles = doctor_profile_service.get_all()
 
         serializer = DoctorProfileSerializer(doctor_profiles, many=True)  # type: ignore
         return Response(
@@ -1085,9 +1092,7 @@ class DoctorProfileViewSet(viewsets.ViewSet):
             Response: A response containing serialized
             data of the requested instance.
         """
-        doctor_profile_obj = DoctorProfile.objects.get(
-            pk=pk
-        )  # pylint: disable=no-member
+        doctor_profile_obj = doctor_profile_service.get_by_id(pk=pk)
 
         if not doctor_profile_obj:
             return Response(
@@ -1120,9 +1125,7 @@ class DoctorProfileViewSet(viewsets.ViewSet):
             Response: A response containing serialized
             data of the partially updated instance.
         """
-        doctor_profile_obj = DoctorProfile.objects.get(
-            pk=pk
-        )  # pylint: disable=no-member
+        doctor_profile_obj = doctor_profile_service.get_by_id(pk=pk)
 
         if not doctor_profile_obj:
             return Response(
@@ -1163,9 +1166,7 @@ class DoctorProfileViewSet(viewsets.ViewSet):
         Returns:
             Response: A response indicating the success of the deletion.
         """
-        doctor_profile_obj = DoctorProfile.objects.get(
-            pk=pk
-        )  # pylint: disable=no-member
+        doctor_profile_obj = doctor_profile_service.get_by_id(pk=pk)
 
         if not doctor_profile_obj:
             return Response(
@@ -1175,12 +1176,101 @@ class DoctorProfileViewSet(viewsets.ViewSet):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        DoctorProfile.objects.get(pk=pk).delete()  # pylint: disable=no-member
+        doctor_profile_service.delete(doctor_profile_obj)
         return Response(
             data=Responses.success_response(
                 message=ResponseMessages.DELETE_SUCCESSFUL.value
             ),
             status=status.HTTP_204_NO_CONTENT,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def filter_doctors(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Filter and retrieve a list of doctor profiles based on optional query parameters.
+
+        Supported query parameters:
+            - division_id (int): ID of the division where the doctor is located.
+            - district_id (int): ID of the district where the doctor is located.
+            - thana_id (int): ID of the thana where the doctor is located.
+            - specialization_id (int): ID of the doctor's specialization.
+
+        Returns:
+            Response: A JSON response containing either:
+                - A success message with a list of matching doctor profiles (as dictionaries).
+                - A 404 error response if no doctors are found.
+        """
+        query_params = request.query_params.dict()
+        doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+
+        if not doctor_profile_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                data=doctor_profile_obj,
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def filtered_appointments(request) -> Response:  # pylint: disable=unused-argument
+        """
+        Filter and retrieve a list of doctor profiles based on optional query parameters.
+
+        Supported query parameters:
+            - division_id (int): ID of the division where the doctor is located.
+            - district_id (int): ID of the district where the doctor is located.
+            - thana_id (int): ID of the thana where the doctor is located.
+            - specialization_id (int): ID of the doctor's specialization.
+
+        Returns:
+            Response: A JSON response containing either:
+                - A success message with a list of matching doctor profiles (as dictionaries).
+                - A 404 error response if no doctors are found.
+        """
+        query_params = request.query_params.dict()
+        appointment_obj = doctor_profile_service.get_filtered_appointments(query_params)
+
+        if not appointment_obj:
+            return Response(
+                data=Responses.error_response(
+                    message=ResponseMessages.NO_DATA_FOUND.value
+                ),
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                data=appointment_obj,
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def user_specific_appointments(request):
+        user, _ = CustomJWTAuthentication().authenticate(request)
+
+        appointments = doctor_profile_service.get_user_specific_appointments(user)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                data=appointments,
+            ),
+            status=status.HTTP_200_OK,
         )
 
 
@@ -1503,4 +1593,104 @@ class AppointmentViewSet(viewsets.ViewSet):
                 message=ResponseMessages.DELETE_SUCCESSFUL.value
             ),
             status=status.HTTP_204_NO_CONTENT,
+        )
+
+
+class AppointmentReportViewSet(viewsets.ViewSet):
+    """
+    A ViewSet for handling reminder, reporting and analytics related to appointments.
+
+    This ViewSet provides endpoints to:
+    - Retrieve appointment reminders sent to patients.
+    - Fetch monthly performance reports per doctor, including total appointments,
+      unique patients, and total earnings.
+
+    Authentication:
+        Requires JWT-based authentication.
+
+    Endpoints:
+        - GET /api/v1/appointments/reminders/
+        - GET /api/v1/appointments/monthly-reports/
+
+    Query Parameters (optional):
+        For reminders:
+            - appointment_id: Filter reminders by specific appointment.
+            - date: Filter reminders by sent date (YYYY-MM-DD).
+
+        For monthly reports:
+            - doctor_id: Filter reports for a specific doctor.
+            - year: Filter by report year.
+            - month: Filter by report month.
+
+    Returns:
+        Standardized JSON responses with appropriate HTTP status codes.
+    """
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def appointment_reminders_list(request) -> Response:
+        """
+        Retrieve a list of appointment reminders.
+
+        Query Params:
+            appointment_id (optional): Filter reminders for a specific appointment.
+            Date (optional): Filter reminders sent on a specific date (YYYY-MM-DD).
+
+        Returns:
+            Response: A response containing serialized appointment reminders.
+        """
+        reminders = AppointmentReminder.objects.all().order_by("-sent_at")
+
+        appointment_id = request.query_params.get("appointment_id")
+        if appointment_id:
+            reminders = reminders.filter(appointment_id=appointment_id)
+
+        date = request.query_params.get("date")
+        if date:
+            reminders = reminders.filter(sent_at__date=date)
+
+        serializer = AppointmentReminderSerializer(reminders, many=True)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
+        )
+
+    @staticmethod
+    @CustomJWTAuthentication.jwt_authenticated
+    @handle_exceptions
+    def appointment_monthly_reports_list(request) -> Response:
+        """
+        Retrieve a list of doctor monthly reports.
+
+        Query Params:
+            doctor_id (optional): Filter by doctor.
+            Year (optional): Filter by year.
+            Month (optional): Filter by month.
+
+        Returns:
+            Response: A response containing serialized monthly reports.
+        """
+        reports = MonthlyReport.objects.all().order_by("-year", "-month")
+
+        doctor_id = request.query_params.get("doctor_id")
+        if doctor_id:
+            reports = reports.filter(doctor_id=doctor_id)
+
+        year = request.query_params.get("year")
+        if year:
+            reports = reports.filter(year=year)
+
+        month = request.query_params.get("month")
+        if month:
+            reports = reports.filter(month=month)
+
+        serializer = MonthlyReportSerializer(reports, many=True)
+        return Response(
+            data=Responses.success_response(
+                message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+            ),
+            status=status.HTTP_200_OK,
         )

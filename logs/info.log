@@ -3,3 +3,490 @@
 [INFO] 2025-07-17 09:08:33,644 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
 [INFO] 2025-07-17 09:08:33,904 request_logger (36): GET /v1/?format=openapi → 200
 [INFO] 2025-07-17 09:08:33,906 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13481
+[INFO] 2025-07-17 16:09:49,104 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 16:21:42,687 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-17 16:21:42,689 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-17 16:21:42,817 django.server (213): "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[INFO] 2025-07-17 16:21:42,819 django.server (213): "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+[INFO] 2025-07-17 16:21:42,820 django.server (213): "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[INFO] 2025-07-17 16:21:42,834 django.server (213): "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+[INFO] 2025-07-17 16:21:42,835 django.server (213): "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+[INFO] 2025-07-17 16:21:42,897 django.server (213): "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[INFO] 2025-07-17 16:21:42,908 django.server (213): "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+[INFO] 2025-07-17 16:21:42,925 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+[INFO] 2025-07-17 16:21:43,114 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+[INFO] 2025-07-17 16:21:43,125 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+[INFO] 2025-07-17 16:21:43,282 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+[INFO] 2025-07-17 16:21:44,120 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+[INFO] 2025-07-17 16:21:44,134 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-17 16:21:44,136 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13481
+[INFO] 2025-07-17 16:21:44,151 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[INFO] 2025-07-17 16:34:06,623 request_logger (36): POST /api/v1/user/login/ → 201
+[INFO] 2025-07-17 16:34:06,633 django.server (213): "POST /api/v1/user/login/ HTTP/1.1" 201 494
+[INFO] 2025-07-17 16:36:12,900 request_logger (36): GET /api/v1/user/list/ → 200
+[INFO] 2025-07-17 16:36:12,902 django.server (213): "GET /api/v1/user/list/ HTTP/1.1" 200 889
+[INFO] 2025-07-17 16:37:13,197 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 16:37:13,198 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 472
+[INFO] 2025-07-17 16:38:02,942 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 16:38:02,943 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 474
+[INFO] 2025-07-17 16:40:01,664 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 16:40:01,666 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 476
+[INFO] 2025-07-17 16:46:42,858 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 16:46:46,066 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 16:48:01,830 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 16:48:03,672 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 16:57:08,845 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:57:08,848 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 224
+[INFO] 2025-07-17 16:57:26,932 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:57:26,933 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 227
+[INFO] 2025-07-17 16:57:43,528 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:57:43,530 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 225
+[INFO] 2025-07-17 16:58:02,567 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:58:02,568 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 226
+[INFO] 2025-07-17 16:58:18,818 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:58:18,821 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 231
+[INFO] 2025-07-17 16:58:33,519 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:58:33,520 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 226
+[INFO] 2025-07-17 16:58:49,448 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:58:49,450 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 225
+[INFO] 2025-07-17 16:59:09,418 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:59:09,420 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 222
+[INFO] 2025-07-17 16:59:24,736 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:59:24,741 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 234
+[INFO] 2025-07-17 16:59:43,816 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:59:43,819 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 225
+[INFO] 2025-07-17 16:59:57,368 request_logger (36): POST /api/v1/specialization/create/ → 201
+[INFO] 2025-07-17 16:59:57,369 django.server (213): "POST /api/v1/specialization/create/ HTTP/1.1" 201 225
+[INFO] 2025-07-17 17:00:56,858 request_logger (36): GET /api/v1/specialization/list/ → 200
+[INFO] 2025-07-17 17:00:56,860 django.server (213): "GET /api/v1/specialization/list/ HTTP/1.1" 200 2077
+[INFO] 2025-07-17 17:10:52,175 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:10:52,177 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 476
+[INFO] 2025-07-17 17:11:52,889 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:11:52,891 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 483
+[INFO] 2025-07-17 17:12:29,142 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:12:29,145 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 478
+[INFO] 2025-07-17 17:13:31,302 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:13:31,304 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 485
+[INFO] 2025-07-17 17:14:12,855 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:14:12,858 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 480
+[INFO] 2025-07-17 17:15:07,358 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 17:15:07,360 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 486
+[INFO] 2025-07-17 17:33:01,309 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:33:02,684 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 17:33:45,844 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:33:47,587 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 17:35:19,290 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:35:20,953 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 17:53:35,570 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:53:36,609 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 17:57:52,198 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:57:53,841 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 17:58:15,802 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 17:58:16,884 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 18:03:46,667 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 18:03:47,942 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 18:30:53,297 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-17 18:30:53,299 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-17 18:30:53,646 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[INFO] 2025-07-17 18:30:53,862 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-17 18:30:53,866 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13481
+[INFO] 2025-07-17 18:34:21,684 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 18:34:23,075 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 19:14:21,939 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 19:14:45,131 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:14:45,136 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 446
+[INFO] 2025-07-17 19:15:12,366 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:15:12,367 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 446
+[INFO] 2025-07-17 19:15:29,941 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:15:29,943 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 450
+[INFO] 2025-07-17 19:15:49,830 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:15:49,832 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 446
+[INFO] 2025-07-17 19:16:08,482 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:16:08,483 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 450
+[INFO] 2025-07-17 19:16:26,568 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:16:26,571 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 447
+[INFO] 2025-07-17 19:16:43,169 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:16:43,170 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 444
+[INFO] 2025-07-17 19:17:03,253 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:17:03,254 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 448
+[INFO] 2025-07-17 19:17:22,196 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:17:22,198 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 450
+[INFO] 2025-07-17 19:17:38,032 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-17 19:17:38,033 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 448
+[INFO] 2025-07-17 19:39:37,333 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 19:39:39,046 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 19:39:50,004 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 19:39:51,695 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 19:47:15,904 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-17 19:47:15,906 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-17 19:47:16,642 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-17 19:47:16,644 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13481
+[INFO] 2025-07-17 19:50:50,033 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 19:50:52,669 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 19:59:45,518 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 19:59:47,683 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:00:44,932 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 20:00:47,073 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:01:45,278 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 20:01:47,266 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:01:52,050 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 20:01:53,514 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:06:02,482 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:06:04,154 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:06:12,530 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:07:08,458 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:07:10,112 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:09:20,875 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:09:22,358 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:09:28,561 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:09:30,258 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:12:17,825 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-17 20:12:17,828 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 257
+[INFO] 2025-07-17 20:12:47,474 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-17 20:12:47,477 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 257
+[INFO] 2025-07-17 20:14:51,582 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:14:55,940 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:16:41,744 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 20:16:43,600 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:17:40,874 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:17:43,010 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:17:46,948 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:28:25,005 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:28:27,239 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:28:34,657 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:31:13,472 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:31:15,377 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:31:34,012 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-17 20:31:34,014 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 358
+[INFO] 2025-07-17 20:33:08,577 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-17 20:33:10,565 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:35:33,782 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:35:35,274 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-17 20:36:22,587 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-17 20:36:22,588 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 362
+[INFO] 2025-07-17 20:43:18,094 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-17 20:43:20,275 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 05:03:07,902 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 05:13:20,137 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 05:13:20,140 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 362
+[INFO] 2025-07-18 05:14:01,993 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 05:14:01,995 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 362
+[INFO] 2025-07-18 05:20:24,209 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-18 05:20:26,390 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 05:48:08,275 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:10:27,382 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/user.py changed, reloading.
+[INFO] 2025-07-18 06:10:30,531 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:16:22,021 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:16:25,088 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:17:08,663 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:17:10,059 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:17:56,573 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:17:58,023 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:18:04,552 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:18:06,544 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:18:48,990 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:18:50,402 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:19:08,027 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:19:09,717 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:20:49,142 request_logger (36): GET /api/v1/doctor/profile/list/ → 200
+[INFO] 2025-07-18 06:20:49,143 django.server (213): "GET /api/v1/doctor/profile/list/ HTTP/1.1" 200 2533
+[INFO] 2025-07-18 06:29:28,119 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 06:29:29,863 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:44:55,167 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:46:46,823 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/urls.py changed, reloading.
+[INFO] 2025-07-18 06:46:49,448 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:47:03,654 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/urls.py changed, reloading.
+[INFO] 2025-07-18 06:47:05,239 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:50:27,820 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 06:50:29,565 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:57:14,737 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 06:57:16,141 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:57:35,470 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 06:57:38,290 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:57:40,870 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:59:16,328 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 06:59:17,916 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 06:59:50,680 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 06:59:51,825 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:00:33,209 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:01:37,897 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:01:38,738 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:02:11,206 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:02:49,302 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:02:50,612 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:03:21,775 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:10:19,156 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:10:21,495 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:11:05,650 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:11:06,908 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:11:15,368 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:11:16,648 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:11:21,892 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:12:26,380 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:12:29,141 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:12:44,387 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:12:46,552 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:15:04,100 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:15:05,335 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:15:12,611 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:16:55,298 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:16:56,801 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:17:01,442 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:19:43,981 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:19:45,455 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:19:53,468 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:19:54,660 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:22:53,975 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:22:55,441 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:22:58,824 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:24:33,926 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:24:35,540 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:24:49,501 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:24:51,634 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:25:02,505 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:25:03,614 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:26:06,511 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:28:15,534 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:28:17,292 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:28:25,211 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:28:26,845 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:30:22,494 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:30:24,118 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:30:41,749 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+[INFO] 2025-07-18 07:30:41,947 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-18 07:30:41,949 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13723
+[INFO] 2025-07-18 07:31:03,761 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:31:05,180 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:32:27,361 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:32:29,035 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:32:34,402 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:32:40,213 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:32:41,898 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:33:04,057 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:33:05,868 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:33:45,883 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:33:47,991 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:39:07,092 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:39:08,377 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:39:23,192 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:41:34,173 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:41:36,017 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:43:26,381 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:43:29,221 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:45:00,418 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:45:01,705 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:45:07,022 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:45:13,260 request_logger (36): GET /api/v1/filter/doctors/?division_id=1 → 200
+[INFO] 2025-07-18 07:45:13,262 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:45:39,031 request_logger (36): GET /api/v1/filter/doctors/?division_id=1&district_id=1 → 200
+[INFO] 2025-07-18 07:45:39,033 django.server (213): "GET /api/v1/filter/doctors/?division_id=1&district_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:45:44,312 request_logger (36): GET /api/v1/filter/doctors/?district_id=1 → 200
+[INFO] 2025-07-18 07:45:44,314 django.server (213): "GET /api/v1/filter/doctors/?district_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:47:20,919 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:47:22,157 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:47:28,444 request_logger (36): GET /api/v1/filter/doctors/?thana_id=1 → 200
+[INFO] 2025-07-18 07:47:28,447 django.server (213): "GET /api/v1/filter/doctors/?thana_id=1 HTTP/1.1" 200 118
+[INFO] 2025-07-18 07:47:43,307 request_logger (36): GET /api/v1/filter/doctors/?division_id=1 → 200
+[INFO] 2025-07-18 07:47:43,308 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 200 576
+[INFO] 2025-07-18 07:48:03,027 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:48:04,649 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:48:07,940 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:48:15,642 request_logger (36): GET /api/v1/filter/doctors/?division_id=1 → 200
+[INFO] 2025-07-18 07:48:15,644 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 200 576
+[INFO] 2025-07-18 07:48:34,235 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:48:35,891 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:48:39,890 request_logger (36): GET /api/v1/filter/doctors/?division_id=1 → 200
+[INFO] 2025-07-18 07:48:39,892 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:49:11,898 request_logger (36): GET /api/v1/filter/doctors/?division_id=1&district_id=1 → 200
+[INFO] 2025-07-18 07:49:11,899 django.server (213): "GET /api/v1/filter/doctors/?division_id=1&district_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:49:38,821 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:49:40,516 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:49:45,428 request_logger (36): GET /api/v1/filter/doctors/?division_id=1&district_id=1 → 200
+[INFO] 2025-07-18 07:49:45,430 django.server (213): "GET /api/v1/filter/doctors/?division_id=1&district_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 07:50:51,836 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:50:53,427 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:51:05,676 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:51:07,144 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:51:58,499 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:51:59,659 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:52:24,865 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:52:25,940 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:53:26,719 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 07:53:28,591 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:54:08,236 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:54:10,653 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:54:24,167 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/urls.py changed, reloading.
+[INFO] 2025-07-18 07:54:25,378 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:54:47,556 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-18 07:54:47,560 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-18 07:54:47,728 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,731 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,735 django.server (213): "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,740 django.server (213): "GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,743 django.server (213): "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,754 django.server (213): "GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:47,757 django.server (213): "GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+[INFO] 2025-07-18 07:54:48,014 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-18 07:54:48,016 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 13723
+[INFO] 2025-07-18 07:55:42,370 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:55:44,057 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:56:22,254 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:56:23,939 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 07:56:29,923 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 07:56:31,373 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:02:26,379 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:02:27,694 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:02:43,122 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:02:54,432 request_logger (36): GET /api/v1/filter/doctors/?division_id=1&district_id=1 → 200
+[INFO] 2025-07-18 08:02:54,433 django.server (213): "GET /api/v1/filter/doctors/?division_id=1&district_id=1 HTTP/1.1" 200 534
+[INFO] 2025-07-18 08:03:13,166 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:03:14,487 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:03:28,264 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:03:29,390 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:14:33,666 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:14:35,404 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:14:53,413 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:14:54,505 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:15:04,832 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:15:07,041 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:15:45,153 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 08:15:46,406 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:16:09,946 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 08:16:11,843 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:18:14,057 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/urls.py changed, reloading.
+[INFO] 2025-07-18 08:18:15,640 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:18:36,460 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 08:18:39,526 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:18:50,269 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 08:18:52,412 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:19:02,046 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 08:19:04,234 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 08:22:13,068 request_logger (36): GET /api/v1/filter/appointments/?doctor_id=6 → 200
+[INFO] 2025-07-18 08:22:13,070 django.server (213): "GET /api/v1/filter/appointments/?doctor_id=6 HTTP/1.1" 200 786
+[INFO] 2025-07-18 08:22:44,033 request_logger (36): GET /api/v1/filter/appointments/?doctor_id=6&status=pending → 200
+[INFO] 2025-07-18 08:22:44,035 django.server (213): "GET /api/v1/filter/appointments/?doctor_id=6&status=pending HTTP/1.1" 200 786
+[INFO] 2025-07-18 08:23:21,960 request_logger (36): GET /api/v1/filter/appointments/?doctor_id=6&status=pending → 200
+[INFO] 2025-07-18 08:23:21,962 django.server (213): "GET /api/v1/filter/appointments/?doctor_id=6&status=pending HTTP/1.1" 200 543
+[INFO] 2025-07-18 08:23:33,125 request_logger (36): GET /api/v1/filter/appointments/?doctor_id=6&status=confirmed → 200
+[INFO] 2025-07-18 08:23:33,128 django.server (213): "GET /api/v1/filter/appointments/?doctor_id=6&status=confirmed HTTP/1.1" 200 305
+[INFO] 2025-07-18 08:24:26,799 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-18 08:24:26,802 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-18 08:24:27,222 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-18 08:24:27,224 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 14852
+[INFO] 2025-07-18 11:29:25,862 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-18 11:29:25,864 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-18 11:29:26,310 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-18 11:29:26,314 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 14852
+[INFO] 2025-07-18 11:40:44,798 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/__init__.py changed, reloading.
+[INFO] 2025-07-18 11:40:47,491 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 11:41:31,305 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/settings.py changed, reloading.
+[INFO] 2025-07-18 11:41:33,517 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 11:52:27,189 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/celery.py changed, reloading.
+[INFO] 2025-07-18 12:05:57,323 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:08:06,306 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/celery.py changed, reloading.
+[INFO] 2025-07-18 12:08:08,579 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:13:57,333 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 12:13:59,826 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:16:55,469 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 12:16:57,666 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:31:42,407 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:34:33,918 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 12:35:18,351 request_logger (36): GET /v1/ → 200
+[INFO] 2025-07-18 12:35:18,352 django.server (213): "GET /v1/ HTTP/1.1" 200 2210
+[INFO] 2025-07-18 12:35:18,741 request_logger (36): GET /v1/?format=openapi → 200
+[INFO] 2025-07-18 12:35:18,743 django.server (213): "GET /v1/?format=openapi HTTP/1.1" 200 15893
+[INFO] 2025-07-18 13:15:35,092 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py changed, reloading.
+[INFO] 2025-07-18 13:15:37,539 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 16:58:41,996 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:00:12,008 request_logger (36): POST /api/v1/user/login/ → 201
+[INFO] 2025-07-18 17:00:12,011 django.server (213): "POST /api/v1/user/login/ HTTP/1.1" 201 494
+[INFO] 2025-07-18 17:04:39,164 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 17:04:41,549 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:04:51,527 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py changed, reloading.
+[INFO] 2025-07-18 17:04:53,383 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:05:00,847 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:05:10,457 request_logger (36): GET /api/v1/user/specific/appointments/ → 200
+[INFO] 2025-07-18 17:05:10,459 django.server (213): "GET /api/v1/user/specific/appointments/ HTTP/1.1" 200 983
+[INFO] 2025-07-18 17:13:07,976 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:48:14,386 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 17:48:37,790 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 17:48:37,792 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 438
+[INFO] 2025-07-18 18:07:18,708 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:07:18,721 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 446
+[INFO] 2025-07-18 18:07:37,333 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:07:37,335 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 444
+[INFO] 2025-07-18 18:07:54,273 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:07:54,275 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 447
+[INFO] 2025-07-18 18:08:09,857 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:08:09,862 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 446
+[INFO] 2025-07-18 18:08:28,016 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:08:28,017 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 442
+[INFO] 2025-07-18 18:08:50,178 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:08:50,180 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 454
+[INFO] 2025-07-18 18:09:34,903 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:09:34,905 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 455
+[INFO] 2025-07-18 18:09:55,566 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:09:55,568 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 453
+[INFO] 2025-07-18 18:10:22,293 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:10:22,295 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 454
+[INFO] 2025-07-18 18:10:40,377 request_logger (36): POST /api/v1/user/register/ → 201
+[INFO] 2025-07-18 18:10:40,378 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 201 453
+[INFO] 2025-07-18 18:14:14,950 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-18 18:14:21,193 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 18:15:06,156 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:15:06,158 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 277
+[INFO] 2025-07-18 18:17:48,526 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:17:48,528 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 277
+[INFO] 2025-07-18 18:18:13,785 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:18:13,787 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 277
+[INFO] 2025-07-18 18:19:10,730 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:19:10,732 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 277
+[INFO] 2025-07-18 18:24:27,485 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/models.py changed, reloading.
+[INFO] 2025-07-18 18:24:30,805 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 18:24:52,991 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 18:25:33,902 request_logger (36): POST /api/v1/doctor/profile/create/ → 201
+[INFO] 2025-07-18 18:25:33,903 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 201 280
+[INFO] 2025-07-18 18:25:54,886 request_logger (36): POST /api/v1/doctor/profile/create/ → 201
+[INFO] 2025-07-18 18:25:54,888 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 201 280
+[INFO] 2025-07-18 18:26:04,774 request_logger (36): POST /api/v1/doctor/profile/create/ → 201
+[INFO] 2025-07-18 18:26:04,776 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 201 280
+[INFO] 2025-07-18 18:26:13,991 request_logger (36): POST /api/v1/doctor/profile/create/ → 201
+[INFO] 2025-07-18 18:26:13,992 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 201 280
+[INFO] 2025-07-18 18:26:34,546 request_logger (36): POST /api/v1/doctor/profile/create/ → 201
+[INFO] 2025-07-18 18:26:34,547 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 201 280
+[INFO] 2025-07-18 18:28:16,319 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:28:16,320 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 277
+[INFO] 2025-07-18 18:28:35,394 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:28:35,395 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 278
+[INFO] 2025-07-18 18:29:00,143 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:29:00,144 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 279
+[INFO] 2025-07-18 18:29:14,063 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:29:14,064 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 279
+[INFO] 2025-07-18 18:29:36,404 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:29:36,406 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 279
+[INFO] 2025-07-18 18:29:50,159 request_logger (36): POST /api/v1/time/slot/create/ → 201
+[INFO] 2025-07-18 18:29:50,160 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 201 279
+[INFO] 2025-07-18 18:31:56,296 request_logger (36): GET /api/v1/doctor/profile/list/ → 200
+[INFO] 2025-07-18 18:31:56,297 django.server (213): "GET /api/v1/doctor/profile/list/ HTTP/1.1" 200 3643
+[INFO] 2025-07-18 18:33:49,999 request_logger (36): GET /api/v1/time/slot/list/ → 200
+[INFO] 2025-07-18 18:33:50,001 django.server (213): "GET /api/v1/time/slot/list/ HTTP/1.1" 200 3135
+[INFO] 2025-07-18 18:36:59,583 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 18:36:59,585 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 332
+[INFO] 2025-07-18 18:37:50,874 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 18:37:50,876 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 332
+[INFO] 2025-07-18 18:38:04,939 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 18:38:04,943 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 332
+[INFO] 2025-07-18 18:38:16,060 request_logger (36): POST /api/v1/appointment/create/ → 201
+[INFO] 2025-07-18 18:38:16,067 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 201 332
+[INFO] 2025-07-18 20:10:45,183 request_logger (36): POST /api/v1/user/login/ → 201
+[INFO] 2025-07-18 20:10:45,184 django.server (213): "POST /api/v1/user/login/ HTTP/1.1" 201 496
+[INFO] 2025-07-18 20:14:23,942 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/celery.py changed, reloading.
+[INFO] 2025-07-18 20:14:26,976 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 20:28:38,422 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/celery.py changed, reloading.
+[INFO] 2025-07-18 20:28:41,003 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 20:29:42,906 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system/wsgi.py changed, reloading.
+[INFO] 2025-07-18 20:29:46,164 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 20:30:55,559 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py changed, reloading.
+[INFO] 2025-07-18 20:31:07,712 django.utils.autoreload (668): Watching for file changes with StatReloader
+[INFO] 2025-07-18 20:32:51,053 django.utils.autoreload (266): /home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/responses.py changed, reloading.
+[INFO] 2025-07-18 20:32:52,427 django.utils.autoreload (668): Watching for file changes with StatReloader

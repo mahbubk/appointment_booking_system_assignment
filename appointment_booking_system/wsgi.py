@@ -1,5 +1,5 @@
 """
-WSGI config for appointment_booking_system project.
+WSGI config for an appointment_booking_system project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

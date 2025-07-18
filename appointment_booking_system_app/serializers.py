@@ -12,8 +12,10 @@ from appointment_booking_system_app.models import (
     DoctorProfile,
     Specialization,
     Thana,
-    User,
     TimeSlot,
+    User,
+    AppointmentReminder,
+    MonthlyReport,
 )
 from utils.api_utils import ApiUtils
 from utils.utils import validate_image_file, validate_password_strength
@@ -301,32 +303,29 @@ class TimeSlotSerializer(serializers.ModelSerializer):
 
 class AppointmentSerializer(serializers.ModelSerializer):
     patient = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.filter(user_type="patient"),
-        required=True,  # pylint: disable=no-member
+        queryset=User.objects.filter(user_type="PATIENT"), required=True
     )
     doctor = serializers.PrimaryKeyRelatedField(
-        queryset=DoctorProfile.objects.all(), required=True  # pylint: disable=no-member
+        queryset=DoctorProfile.objects.all(), required=True
     )
 
-    # pylint: disable=too-few-public-methods
     class Meta:
         model = Appointment
         fields = "__all__"
-        read_only_fields = [
-            "status",
-            "consultation_fee",
-        ]
+        read_only_fields = ["status", "consultation_fee", "created_at", "updated_at"]
+        extra_kwargs = {
+            "appointment_date": {"required": True},
+            "appointment_time": {"required": True},
+        }
 
-    @staticmethod
-    def validate_appointment_date(value):
+    def validate_appointment_date(self, value):
         """Validate appointment date is in the future"""
         if value < timezone.now().date():
             raise serializers.ValidationError("Appointment date cannot be in the past.")
         return value
 
-    @staticmethod
-    def validate_appointment_time(value):
-        """Basic time validation (could add business hours check)"""
+    def validate_appointment_time(self, value):
+        """Validate time is within business hours"""
         if (
             value < datetime.strptime("09:00", "%H:%M").time()
             or value > datetime.strptime("17:00", "%H:%M").time()
@@ -338,6 +337,7 @@ class AppointmentSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         """Cross-field validation"""
+        # Combine date and time for comprehensive validation
         appointment_datetime = timezone.make_aware(
             datetime.combine(attrs["appointment_date"], attrs["appointment_time"])
         )
@@ -347,47 +347,45 @@ class AppointmentSerializer(serializers.ModelSerializer):
                 "Appointment cannot be scheduled in the past."
             )
 
+        # Check doctor availability
         doctor = attrs["doctor"]
         weekday = attrs["appointment_date"].weekday()
-        available_slots = doctor.time_slots.filter(
+
+        # Verify the doctor has an available time slot
+        if not doctor.time_slots.filter(
             weekday=weekday,
             start_time__lte=attrs["appointment_time"],
             end_time__gt=attrs["appointment_time"],
-            is_active=True,
-        )
-
-        if not available_slots.exists():
+            is_available=True,
+        ).exists():
             raise serializers.ValidationError("Doctor is not available at this time.")
 
-        conflicting_appointments = (
-            Appointment.objects.filter(  # pylint: disable=no-member
+        # Check for conflicting appointments
+        if (
+            Appointment.objects.filter(
                 doctor=doctor,
                 appointment_date=attrs["appointment_date"],
                 appointment_time=attrs["appointment_time"],
                 status__in=["pending", "confirmed"],
-            ).exclude(pk=self.instance.pk if self.instance else None)
-        )
-
-        if conflicting_appointments.exists():
+            )
+            .exclude(pk=self.instance.pk if self.instance else None)
+            .exists()
+        ):
             raise serializers.ValidationError("This time slot is already booked.")
 
         return attrs
 
     def create(self, validated_data):
         """Handle creation with auto fields"""
+        # Set default status
+        validated_data.setdefault("status", "pending")
 
-        validated_data["status"] = "pending"
+        # Auto-set consultation fee if isn't provided
+        validated_data.setdefault(
+            "consultation_fee", validated_data["doctor"].user.consultation_fee
+        )
 
-        if "consultation_fee" not in validated_data:
-            validated_data["consultation_fee"] = validated_data[
-                "doctor"
-            ].consultation_fee
-
-        appointment = super().create(validated_data)
-
-        appointment.save()
-
-        return appointment
+        return super().create(validated_data)
 
     def update(self, instance, validated_data):
         """Prevent updating certain fields if appointment is completed/canceled"""
@@ -396,4 +394,52 @@ class AppointmentSerializer(serializers.ModelSerializer):
                 "Cannot modify completed or cancelled appointments."
             )
 
+        # Prevent changing doctor for existing appointments
+        if "doctor" in validated_data and validated_data["doctor"] != instance.doctor:
+            raise serializers.ValidationError(
+                "Cannot change doctor for an existing appointment."
+            )
+
         return super().update(instance, validated_data)
+
+
+class AppointmentReminderSerializer(serializers.ModelSerializer):
+    """
+    API view to retrieve a list of all AppointmentReminder.
+
+    This view handles GET requests and returns a serialized list of all
+    AppointmentReminder model instances in the system.
+    """
+
+    # pylint: disable=too-few-public-methods
+    class Meta:
+        """
+        Handle GET request to retrieve all AppointmentReminder records.
+
+        Returns:
+            Response: A JSON response containing serialized AppointmentReminder data.
+        """
+
+        model = AppointmentReminder
+        fields = "__all__"
+
+
+class MonthlyReportSerializer(serializers.ModelSerializer):
+    """
+    API view to retrieve a list of all MonthlyReport.
+
+    This view handles GET requests and returns a serialized list of all
+    MonthlyReport model instances in the system.
+    """
+
+    # pylint: disable=too-few-public-methods
+    class Meta:
+        """
+        Handle GET request to retrieve all MonthlyReport records.
+
+        Returns:
+            Response: A JSON response containing serialized MonthlyReport data.
+        """
+
+        model = MonthlyReport
+        fields = "__all__"

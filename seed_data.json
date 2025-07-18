@@ -1,0 +1,2951 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add division",
+    "content_type": 7,
+    "codename": "add_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change division",
+    "content_type": 7,
+    "codename": "change_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete division",
+    "content_type": 7,
+    "codename": "delete_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view division",
+    "content_type": 7,
+    "codename": "view_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add district",
+    "content_type": 8,
+    "codename": "add_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change district",
+    "content_type": 8,
+    "codename": "change_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete district",
+    "content_type": 8,
+    "codename": "delete_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view district",
+    "content_type": 8,
+    "codename": "view_district"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add thana",
+    "content_type": 9,
+    "codename": "add_thana"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change thana",
+    "content_type": 9,
+    "codename": "change_thana"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete thana",
+    "content_type": 9,
+    "codename": "delete_thana"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view thana",
+    "content_type": 9,
+    "codename": "view_thana"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 10,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 10,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 10,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 10,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add token",
+    "content_type": 11,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change token",
+    "content_type": 11,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete token",
+    "content_type": 11,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view token",
+    "content_type": 11,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add cache token",
+    "content_type": 12,
+    "codename": "add_cachetoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change cache token",
+    "content_type": 12,
+    "codename": "change_cachetoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete cache token",
+    "content_type": 12,
+    "codename": "delete_cachetoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view cache token",
+    "content_type": 12,
+    "codename": "view_cachetoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add specialization",
+    "content_type": 13,
+    "codename": "add_specialization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change specialization",
+    "content_type": 13,
+    "codename": "change_specialization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete specialization",
+    "content_type": 13,
+    "codename": "delete_specialization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view specialization",
+    "content_type": 13,
+    "codename": "view_specialization"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add appointment",
+    "content_type": 14,
+    "codename": "add_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change appointment",
+    "content_type": 14,
+    "codename": "change_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete appointment",
+    "content_type": 14,
+    "codename": "delete_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view appointment",
+    "content_type": 14,
+    "codename": "view_appointment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add appointment status log",
+    "content_type": 15,
+    "codename": "add_appointmentstatuslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change appointment status log",
+    "content_type": 15,
+    "codename": "change_appointmentstatuslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete appointment status log",
+    "content_type": 15,
+    "codename": "delete_appointmentstatuslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view appointment status log",
+    "content_type": 15,
+    "codename": "view_appointmentstatuslog"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add doctor profile",
+    "content_type": 16,
+    "codename": "add_doctorprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change doctor profile",
+    "content_type": 16,
+    "codename": "change_doctorprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete doctor profile",
+    "content_type": 16,
+    "codename": "delete_doctorprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view doctor profile",
+    "content_type": 16,
+    "codename": "view_doctorprofile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add appointment reminder",
+    "content_type": 17,
+    "codename": "add_appointmentreminder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change appointment reminder",
+    "content_type": 17,
+    "codename": "change_appointmentreminder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete appointment reminder",
+    "content_type": 17,
+    "codename": "delete_appointmentreminder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view appointment reminder",
+    "content_type": 17,
+    "codename": "view_appointmentreminder"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add monthly report",
+    "content_type": 18,
+    "codename": "add_monthlyreport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change monthly report",
+    "content_type": 18,
+    "codename": "change_monthlyreport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete monthly report",
+    "content_type": 18,
+    "codename": "delete_monthlyreport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view monthly report",
+    "content_type": 18,
+    "codename": "view_monthlyreport"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add time slot",
+    "content_type": 19,
+    "codename": "add_timeslot"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change time slot",
+    "content_type": 19,
+    "codename": "change_timeslot"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete time slot",
+    "content_type": 19,
+    "codename": "delete_timeslot"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view time slot",
+    "content_type": 19,
+    "codename": "view_timeslot"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add crontab",
+    "content_type": 20,
+    "codename": "add_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change crontab",
+    "content_type": 20,
+    "codename": "change_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete crontab",
+    "content_type": 20,
+    "codename": "delete_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view crontab",
+    "content_type": 20,
+    "codename": "view_crontabschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add interval",
+    "content_type": 21,
+    "codename": "add_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change interval",
+    "content_type": 21,
+    "codename": "change_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete interval",
+    "content_type": 21,
+    "codename": "delete_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view interval",
+    "content_type": 21,
+    "codename": "view_intervalschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add periodic task",
+    "content_type": 22,
+    "codename": "add_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change periodic task",
+    "content_type": 22,
+    "codename": "change_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete periodic task",
+    "content_type": 22,
+    "codename": "delete_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view periodic task",
+    "content_type": 22,
+    "codename": "view_periodictask"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add periodic task track",
+    "content_type": 23,
+    "codename": "add_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change periodic task track",
+    "content_type": 23,
+    "codename": "change_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete periodic task track",
+    "content_type": 23,
+    "codename": "delete_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view periodic task track",
+    "content_type": 23,
+    "codename": "view_periodictasks"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add solar event",
+    "content_type": 24,
+    "codename": "add_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change solar event",
+    "content_type": 24,
+    "codename": "change_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete solar event",
+    "content_type": 24,
+    "codename": "delete_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view solar event",
+    "content_type": 24,
+    "codename": "view_solarschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 97,
+  "fields": {
+    "name": "Can add clocked",
+    "content_type": 25,
+    "codename": "add_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 98,
+  "fields": {
+    "name": "Can change clocked",
+    "content_type": 25,
+    "codename": "change_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 99,
+  "fields": {
+    "name": "Can delete clocked",
+    "content_type": 25,
+    "codename": "delete_clockedschedule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 100,
+  "fields": {
+    "name": "Can view clocked",
+    "content_type": 25,
+    "codename": "view_clockedschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "division"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "district"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "thana"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "cachetoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "specialization"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "appointment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "appointmentstatuslog"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "doctorprofile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "appointmentreminder"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "monthlyreport"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "appointment_booking_system_app",
+    "model": "timeslot"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "crontabschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "intervalschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictask"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "periodictasks"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "solarschedule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 25,
+  "fields": {
+    "app_label": "django_celery_beat",
+    "model": "clockedschedule"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Dhaka"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Chittagong"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Rajshahi"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": " Khulna"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Sylhet"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Barishal"
+  }
+},
+{
+  "model": "appointment_booking_system_app.division",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": " Rangpur"
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Dhaka",
+    "division": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Gazipur",
+    "division": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Narayanganj",
+    "division": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Tangail",
+    "division": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Barishal",
+    "division": 6
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Patuakhali",
+    "division": 6
+  }
+},
+{
+  "model": "appointment_booking_system_app.district",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Bhola",
+    "division": 6
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Gulshan",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Banani",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Tejgaon",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Mirpur",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Pallabi",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Uttara West",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.thana",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "name": "Uttara East",
+    "district": 1
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T11:03:01.877Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T17:00:11.741Z",
+    "updated_by": "",
+    "fullname": "mahub",
+    "password": "bcrypt_sha256$$2b$12$QbNWJ0vjBsm1mj8me/5k2exFhCdXnshH2omZs6Fs/o881tVg.t/t2",
+    "email": "admin@123.com",
+    "phone": "+8801736334490",
+    "profile_picture": "profile_pictures/2_ZRWXk2p.jpeg",
+    "user_type": "ADMIN",
+    "division": 1,
+    "district": 1,
+    "thana": 1,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T14:57:01.874Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T14:57:01.918Z",
+    "updated_by": "",
+    "fullname": "mahub_doc",
+    "password": "bcrypt_sha256$$2b$12$8j5QrowpWhhyxfh15u5hRujaeRoAsNmrEsZ2EfnujRhqPP7dze.YS",
+    "email": "admin11@123.com",
+    "phone": "+8801736334475",
+    "profile_picture": "profile_pictures/2_I4AV8gk.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 1,
+    "license_number": "ty567",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-17T16:37:13.077Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:37:13.123Z",
+    "updated_by": "",
+    "fullname": "Asad",
+    "password": "bcrypt_sha256$$2b$12$Q3.mD6fMGu.OTW2J5tsTmuXsf.1/ZkYJD.P3cIFVGKlVrdxrxpPWe",
+    "email": "asad@123.com",
+    "phone": "+8801736312475",
+    "profile_picture": "profile_pictures/2_YmqFHKF.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 2,
+    "license_number": "ty569",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-17T16:38:02.914Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:38:02.926Z",
+    "updated_by": "",
+    "fullname": "sofik",
+    "password": "bcrypt_sha256$$2b$12$S084Lej9D0jUsA3IaK7PCupSlnImwkmHh3uniXJ0wjjeZ1aKf50ju",
+    "email": "sofik@123.com",
+    "phone": "+8801736112410",
+    "profile_picture": "profile_pictures/2_xkbsGXC.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 2,
+    "license_number": "ty562",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-17T16:40:01.640Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:40:01.646Z",
+    "updated_by": "",
+    "fullname": "jobbar",
+    "password": "bcrypt_sha256$$2b$12$jHvQXUvMgpo33GTYOtVSfOR77.XgzS3NE2K07pouB2DuvGF.nERPW",
+    "email": "jobbar@123.com",
+    "phone": "+8801736112412",
+    "profile_picture": "profile_pictures/2_Xd3Nna2.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 3,
+    "license_number": "ty519",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-17T17:10:52.133Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:10:52.157Z",
+    "updated_by": "",
+    "fullname": "borkot",
+    "password": "bcrypt_sha256$$2b$12$HU4.CIxeyOdkXxTC92EmCOx4KVXmhYmsXwC0b4kf5AV446hITx1LO",
+    "email": "borkot@123.com",
+    "phone": "+8801736112411",
+    "profile_picture": "profile_pictures/2_IMzKrDa.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 3,
+    "license_number": "ty515",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-17T17:11:52.868Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:11:52.873Z",
+    "updated_by": "",
+    "fullname": "abu sayed",
+    "password": "bcrypt_sha256$$2b$12$fQpTD6hylnpb0aNUn2rDNOOJEwQISddAwLPtSbS.9Fq5mXEBDEj7C",
+    "email": "abu_sayed@123.com",
+    "phone": "+8801706112410",
+    "profile_picture": "profile_pictures/2_Dm0TGZb.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 4,
+    "license_number": "ty109",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-17T17:12:29.118Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:12:29.127Z",
+    "updated_by": "",
+    "fullname": "mughdo",
+    "password": "bcrypt_sha256$$2b$12$iEazhnY8j60Aqss0JScXguoBhKK9vtTAzgutWHXGGiRj5WYkTvONO",
+    "email": "mughdo@123.com",
+    "phone": "+8801706110410",
+    "profile_picture": "profile_pictures/2_lOCJkTp.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 4,
+    "license_number": "ty101p",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-17T17:13:31.270Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:13:31.284Z",
+    "updated_by": "",
+    "fullname": "jalauddin",
+    "password": "bcrypt_sha256$$2b$12$KmRBxr5dlWKE3Q/pLhkoRuFaGvJl/B3XKcwu2SQ58CAcFqb8gVZoa",
+    "email": "jalauddin@123.com",
+    "phone": "+8801706110411",
+    "profile_picture": "profile_pictures/2_Nhu2p6z.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 5,
+    "license_number": "ty101fj",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-17T17:14:12.832Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:14:12.840Z",
+    "updated_by": "",
+    "fullname": "turgut",
+    "password": "bcrypt_sha256$$2b$12$QepLosSrPtw6Lqwhb12dDOyvg4GCQ/rBRdmaDX58nOE6zDhzVF5sO",
+    "email": "turgut@123.com",
+    "phone": "+8801706112411",
+    "profile_picture": "profile_pictures/2_zGio2qD.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 5,
+    "license_number": "ty101f19",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 15,
+  "fields": {
+    "created_at": "2025-07-17T17:15:07.334Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T17:15:07.342Z",
+    "updated_by": "",
+    "fullname": "kurdugulu",
+    "password": "bcrypt_sha256$$2b$12$1acWdIndFfr5acqcUEen.eIHi1Lecb5ZezWImg3v.Be3ahpfU2NUy",
+    "email": "kurdugulu@123.com",
+    "phone": "+8801706112415",
+    "profile_picture": "profile_pictures/2_DoRuMTf.jpeg",
+    "user_type": "DOCTOR",
+    "division": 1,
+    "district": 1,
+    "thana": 6,
+    "license_number": "ty101f1m",
+    "experience_years": 3,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 16,
+  "fields": {
+    "created_at": "2025-07-17T19:14:45.082Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:14:45.082Z",
+    "updated_by": "",
+    "fullname": "Amina Akter",
+    "password": "bcrypt_sha256$$2b$12$gRrTFrilUZGrx0pjlwmzNeBXzn9u4YVx1YKhq.XsOCGlSncH1LXH.",
+    "email": "amina@example.com",
+    "phone": "+8801710000001",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 17,
+  "fields": {
+    "created_at": "2025-07-17T19:15:12.348Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:15:12.348Z",
+    "updated_by": "",
+    "fullname": "Rahim Uddin",
+    "password": "bcrypt_sha256$$2b$12$9V526Lra8AlNWARqp3Y8LOwvxP4ifjBpvsiT.BeYlk7gIUDEq9vuO",
+    "email": "rahim@example.com",
+    "phone": "+8801710000002",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 18,
+  "fields": {
+    "created_at": "2025-07-17T19:15:29.928Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:15:29.928Z",
+    "updated_by": "",
+    "fullname": "Nasrin Sultana",
+    "password": "bcrypt_sha256$$2b$12$wodioOCSwDvW/hHMWShEmeIhQuM3JG9zTu4srsD0JnLa2piAGrak2",
+    "email": "nasrin@example.com",
+    "phone": "+8801710000003",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 19,
+  "fields": {
+    "created_at": "2025-07-17T19:15:49.811Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:15:49.811Z",
+    "updated_by": "",
+    "fullname": "Sajid Hasan",
+    "password": "bcrypt_sha256$$2b$12$VJT5etsGaI7VY48l1GzNXegfzbJV60L/VFnechenQ/Thh6HVO8M42",
+    "email": "sajid@example.com",
+    "phone": "+8801710000004",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 20,
+  "fields": {
+    "created_at": "2025-07-17T19:16:08.466Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:16:08.466Z",
+    "updated_by": "",
+    "fullname": "Lamia Chowdhury",
+    "password": "bcrypt_sha256$$2b$12$CPEWfbWhgh0wgUEeQd01JeRsszWUp8f.pskuYvWdnNPjO75NsUtyO",
+    "email": "lamia@example.com",
+    "phone": "+8801710000005",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 21,
+  "fields": {
+    "created_at": "2025-07-17T19:16:26.488Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:16:26.488Z",
+    "updated_by": "",
+    "fullname": "Habib Rahman",
+    "password": "bcrypt_sha256$$2b$12$SOklS.qjdXOHpADzWGvieeHJN0dOuLWZY4l39lMHGxDH9VdQlReB6",
+    "email": "habib@example.com",
+    "phone": "+8801710000006",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 22,
+  "fields": {
+    "created_at": "2025-07-17T19:16:43.149Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:16:43.149Z",
+    "updated_by": "",
+    "fullname": "Rina Begum",
+    "password": "bcrypt_sha256$$2b$12$Xf0WZzm9.Uts8ZRd6R4zD.0ZqW/rNzERAvRB4he74d9SFnaY3sPcm",
+    "email": "rina@example.com",
+    "phone": "+8801710000007",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 23,
+  "fields": {
+    "created_at": "2025-07-17T19:17:03.237Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:17:03.237Z",
+    "updated_by": "",
+    "fullname": "Tariq Mahmood",
+    "password": "bcrypt_sha256$$2b$12$Jm6RZCEuD4BrG3dHVh3aNuXvP91LGQwDKx9FpQ6p5pAoPBmGgvEJm",
+    "email": "tariq@example.com",
+    "phone": "+8801710000008",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 24,
+  "fields": {
+    "created_at": "2025-07-17T19:17:22.177Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:17:22.177Z",
+    "updated_by": "",
+    "fullname": "Farzana Jahan",
+    "password": "bcrypt_sha256$$2b$12$/.nndfTy3Rj8m7JQtJXpTOdiPSO3YrHcSHhyJl/ktEz6upVzUu/UK",
+    "email": "farzana@example.com",
+    "phone": "+8801710000009",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 25,
+  "fields": {
+    "created_at": "2025-07-17T19:17:38.015Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T19:17:38.015Z",
+    "updated_by": "",
+    "fullname": "Mehedi Hasan",
+    "password": "bcrypt_sha256$$2b$12$qw3F.Ww3Kyd5jM6dy.n5puU2voerK7sQ3ZanzoHA3jlsJHDsCC41.",
+    "email": "mehedi@example.com",
+    "phone": "+8801710000010",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 27,
+  "fields": {
+    "created_at": "2025-07-18T17:48:37.738Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T17:48:37.738Z",
+    "updated_by": "",
+    "fullname": "Admin",
+    "password": "bcrypt_sha256$$2b$12$IK4V2J2.Rhw3GnMvxg.2Ruq1D.FvjqSpwQHsHPHvVIh6k8E/6ZKBm",
+    "email": "admin@example.com",
+    "phone": "+8801710000011",
+    "profile_picture": "",
+    "user_type": "ADMIN",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 28,
+  "fields": {
+    "created_at": "2025-07-18T18:07:18.678Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:07:18.678Z",
+    "updated_by": "",
+    "fullname": "Alice Smith",
+    "password": "bcrypt_sha256$$2b$12$G4QirB.I9X8wjFexj5WI7uj4EASkmfsub2QNBvUbStMh2etGy5.QO",
+    "email": "alice@example.com",
+    "phone": "+8801700000001",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 29,
+  "fields": {
+    "created_at": "2025-07-18T18:07:37.228Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:07:37.228Z",
+    "updated_by": "",
+    "fullname": "Bob Johnson",
+    "password": "bcrypt_sha256$$2b$12$F0LcDGZDC6elyXoofRBAFubpcOpiaULY05nEaWBG.7tAqXSOIs.iy",
+    "email": "bob@example.com",
+    "phone": "+8801700000002",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 30,
+  "fields": {
+    "created_at": "2025-07-18T18:07:54.202Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:07:54.202Z",
+    "updated_by": "",
+    "fullname": "Carol Taylor",
+    "password": "bcrypt_sha256$$2b$12$ceEXzpMYiHWyMdOkmzR7B.sNMNHqOtQ3z7Wpi2QlGB26wihhctiLG",
+    "email": "carol@example.com",
+    "phone": "+8801700000003",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 31,
+  "fields": {
+    "created_at": "2025-07-18T18:08:09.842Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:08:09.842Z",
+    "updated_by": "",
+    "fullname": "David Brown",
+    "password": "bcrypt_sha256$$2b$12$nae37Pp5J1Obt711yRTdL.OcatGQnjsd04pXEcBqOMdo67nRa2Sd6",
+    "email": "david@example.com",
+    "phone": "+8801700000004",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 32,
+  "fields": {
+    "created_at": "2025-07-18T18:08:27.980Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:08:27.980Z",
+    "updated_by": "",
+    "fullname": "Eve Davis",
+    "password": "bcrypt_sha256$$2b$12$EkHbL3amfrfST.C2ZkltceoUA.D6zQnPrfHMHgo/2A3jOugJNewRS",
+    "email": "eve@example.com",
+    "phone": "+8801700000005",
+    "profile_picture": "",
+    "user_type": "PATIENT",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": null,
+    "experience_years": null,
+    "consultation_fee": "0.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 33,
+  "fields": {
+    "created_at": "2025-07-18T18:08:50.120Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:08:50.120Z",
+    "updated_by": "",
+    "fullname": "Dr. John Miller",
+    "password": "bcrypt_sha256$$2b$12$IDuFT.6TbwmjWOvXM6ps/.w3Ak.LBWhMftnXa2bMSIPPlDmPZZc/K",
+    "email": "john@example.com",
+    "phone": "+8801700000006",
+    "profile_picture": "",
+    "user_type": "DOCTOR",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": "DOC-1001",
+    "experience_years": 10,
+    "consultation_fee": "500.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 34,
+  "fields": {
+    "created_at": "2025-07-18T18:09:34.856Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:09:34.856Z",
+    "updated_by": "",
+    "fullname": "Dr. Laura Wilson",
+    "password": "bcrypt_sha256$$2b$12$6U50tvVq8il6rlaIMBijT.UfF306Zn9hVcZmSptbVreb6TNHtF5Re",
+    "email": "laura@example.com",
+    "phone": "+8801700000007",
+    "profile_picture": "",
+    "user_type": "DOCTOR",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": "DOC-1002",
+    "experience_years": 8,
+    "consultation_fee": "400.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 35,
+  "fields": {
+    "created_at": "2025-07-18T18:09:55.523Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:09:55.523Z",
+    "updated_by": "",
+    "fullname": "Dr. Mark Moore",
+    "password": "bcrypt_sha256$$2b$12$TGIGNGmd7JVeGpTS9yK7BeZpbKb40mDUSlh7RE2CvJ8sjW8djvRgS",
+    "email": "mark@example.com",
+    "phone": "+8801700000008",
+    "profile_picture": "",
+    "user_type": "DOCTOR",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": "DOC-1003",
+    "experience_years": 12,
+    "consultation_fee": "600.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 36,
+  "fields": {
+    "created_at": "2025-07-18T18:10:22.259Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:10:22.259Z",
+    "updated_by": "",
+    "fullname": "Dr. Nancy Clark",
+    "password": "bcrypt_sha256$$2b$12$mOzC18x11Ct289NTXQY4X.FLvtBPnMn368lz7EYWfjHx3aEdJ.iei",
+    "email": "nancy@example.com",
+    "phone": "+8801700000009",
+    "profile_picture": "",
+    "user_type": "DOCTOR",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": "DOC-1004",
+    "experience_years": 7,
+    "consultation_fee": "450.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.user",
+  "pk": 37,
+  "fields": {
+    "created_at": "2025-07-18T18:10:40.329Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:10:40.329Z",
+    "updated_by": "",
+    "fullname": "Dr. Paul Lewis",
+    "password": "bcrypt_sha256$$2b$12$YTreDjLPz/wZGCyJCfQDuul.E2vaXILQsmWK7VgijFQxyrosnVWDi",
+    "email": "paul@example.com",
+    "phone": "+8801700000010",
+    "profile_picture": "",
+    "user_type": "DOCTOR",
+    "division": null,
+    "district": null,
+    "thana": null,
+    "license_number": "DOC-1005",
+    "experience_years": 15,
+    "consultation_fee": "700.00",
+    "is_active": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 1,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": "",
+    "name": "Medicine",
+    "description": "",
+    "created_at": "2025-07-16T12:15:21.771Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 2,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:57:08.815Z",
+    "updated_by": "",
+    "name": "Neurology",
+    "description": "",
+    "created_at": "2025-07-17T16:57:08.815Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 3,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:57:26.921Z",
+    "updated_by": "",
+    "name": "Neurosurgery",
+    "description": "",
+    "created_at": "2025-07-17T16:57:26.921Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 4,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:57:43.449Z",
+    "updated_by": "",
+    "name": "Cardiology",
+    "description": "",
+    "created_at": "2025-07-17T16:57:43.449Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 5,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:58:02.548Z",
+    "updated_by": "",
+    "name": "Pulmonology",
+    "description": "",
+    "created_at": "2025-07-17T16:58:02.548Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 6,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:58:18.747Z",
+    "updated_by": "",
+    "name": "Gastroenterology",
+    "description": "",
+    "created_at": "2025-07-17T16:58:18.747Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 7,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:58:33.502Z",
+    "updated_by": "",
+    "name": "Diabetology",
+    "description": "",
+    "created_at": "2025-07-17T16:58:33.502Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 8,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:58:49.416Z",
+    "updated_by": "",
+    "name": "Hematology",
+    "description": "",
+    "created_at": "2025-07-17T16:58:49.416Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 9,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:59:09.344Z",
+    "updated_by": "",
+    "name": "Urology",
+    "description": "",
+    "created_at": "2025-07-17T16:59:09.344Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 10,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:59:24.689Z",
+    "updated_by": "",
+    "name": "Orthopedic Surgery",
+    "description": "",
+    "created_at": "2025-07-17T16:59:24.689Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 11,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:59:43.797Z",
+    "updated_by": "",
+    "name": "Dentistry",
+    "description": "",
+    "created_at": "2025-07-17T16:59:43.797Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.specialization",
+  "pk": 12,
+  "fields": {
+    "created_by": "dev",
+    "updated_at": "2025-07-17T16:59:57.323Z",
+    "updated_by": "",
+    "name": "Radiology",
+    "description": "",
+    "created_at": "2025-07-17T16:59:57.323Z"
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 4,
+    "specialization": 1,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 5,
+    "specialization": 2,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 6,
+    "specialization": 3,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 7,
+    "specialization": 4,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 9,
+    "specialization": 5,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 11,
+    "specialization": 6,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 12,
+    "specialization": 7,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": [
+      4,
+      3
+    ]
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 13,
+    "specialization": 8,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 14,
+    "specialization": 9,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-16T12:15:21.771Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-16T12:15:21.771Z",
+    "updated_by": " ",
+    "user": 15,
+    "specialization": 10,
+    "bio": "Dedicated dermatologist focused on skin health and treatments.",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-18T18:25:33.811Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:25:33.811Z",
+    "updated_by": "",
+    "user": 33,
+    "specialization": 1,
+    "bio": "Cardiologist with 10 years experience",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-18T18:25:54.872Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:25:54.872Z",
+    "updated_by": "",
+    "user": 34,
+    "specialization": 5,
+    "bio": "Cardiologist with 10 years experience",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-18T18:26:04.731Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:26:04.731Z",
+    "updated_by": "",
+    "user": 35,
+    "specialization": 7,
+    "bio": "Cardiologist with 10 years experience",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-18T18:26:13.953Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:26:13.953Z",
+    "updated_by": "",
+    "user": 36,
+    "specialization": 8,
+    "bio": "Cardiologist with 10 years experience",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.doctorprofile",
+  "pk": 15,
+  "fields": {
+    "created_at": "2025-07-18T18:26:34.507Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:26:34.507Z",
+    "updated_by": "",
+    "user": 37,
+    "specialization": 8,
+    "bio": "Cardiologist with 10 years experience",
+    "time_slots": []
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-17T20:12:17.745Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T20:12:17.745Z",
+    "updated_by": "",
+    "doctor": 6,
+    "weekday": 1,
+    "start_time": "09:00:00",
+    "end_time": "12:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-17T20:12:47.435Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T20:12:47.435Z",
+    "updated_by": "",
+    "doctor": 6,
+    "weekday": 3,
+    "start_time": "13:30:00",
+    "end_time": "17:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-17T20:12:47.435Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T20:12:47.435Z",
+    "updated_by": "",
+    "doctor": 7,
+    "weekday": 3,
+    "start_time": "13:30:00",
+    "end_time": "17:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-17T20:12:17.745Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T20:12:17.745Z",
+    "updated_by": "",
+    "doctor": 7,
+    "weekday": 1,
+    "start_time": "09:00:00",
+    "end_time": "12:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-18T18:15:06.144Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:15:06.144Z",
+    "updated_by": "",
+    "doctor": 8,
+    "weekday": 1,
+    "start_time": "09:00:00",
+    "end_time": "11:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-18T18:17:48.501Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:17:48.501Z",
+    "updated_by": "",
+    "doctor": 8,
+    "weekday": 3,
+    "start_time": "14:00:00",
+    "end_time": "16:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-18T18:18:13.745Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:18:13.745Z",
+    "updated_by": "",
+    "doctor": 8,
+    "weekday": 2,
+    "start_time": "10:00:00",
+    "end_time": "12:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-18T18:19:10.650Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:19:10.650Z",
+    "updated_by": "",
+    "doctor": 8,
+    "weekday": 4,
+    "start_time": "15:00:00",
+    "end_time": "17:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-18T18:28:16.268Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:28:16.268Z",
+    "updated_by": "",
+    "doctor": 9,
+    "weekday": 1,
+    "start_time": "08:30:00",
+    "end_time": "10:30:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-18T18:28:35.380Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:28:35.380Z",
+    "updated_by": "",
+    "doctor": 9,
+    "weekday": 5,
+    "start_time": "13:00:00",
+    "end_time": "15:00:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 11,
+  "fields": {
+    "created_at": "2025-07-18T18:29:00.098Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:29:00.098Z",
+    "updated_by": "",
+    "doctor": 10,
+    "weekday": 0,
+    "start_time": "09:30:00",
+    "end_time": "11:30:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 12,
+  "fields": {
+    "created_at": "2025-07-18T18:29:14.056Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:29:14.056Z",
+    "updated_by": "",
+    "doctor": 11,
+    "weekday": 3,
+    "start_time": "14:30:00",
+    "end_time": "16:30:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 13,
+  "fields": {
+    "created_at": "2025-07-18T18:29:36.367Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:29:36.367Z",
+    "updated_by": "",
+    "doctor": 12,
+    "weekday": 2,
+    "start_time": "10:30:00",
+    "end_time": "12:30:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.timeslot",
+  "pk": 14,
+  "fields": {
+    "created_at": "2025-07-18T18:29:50.120Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:29:50.120Z",
+    "updated_by": "",
+    "doctor": 12,
+    "weekday": 4,
+    "start_time": "15:30:00",
+    "end_time": "17:30:00",
+    "is_available": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-17T20:36:22.564Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-17T20:36:22.564Z",
+    "updated_by": "",
+    "patient": 23,
+    "doctor": 6,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "09:00:00",
+    "notes": "Annual checkup and vaccination",
+    "status": "confirmed",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-18T05:13:19.986Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T05:13:19.986Z",
+    "updated_by": "",
+    "patient": 23,
+    "doctor": 6,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "09:30:00",
+    "notes": "Annual checkup and vaccination",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-18T05:14:01.961Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T05:14:01.961Z",
+    "updated_by": "",
+    "patient": 22,
+    "doctor": 6,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "09:10:00",
+    "notes": "Annual checkup and vaccination",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-18T18:36:59.510Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:36:59.510Z",
+    "updated_by": "",
+    "patient": 16,
+    "doctor": 6,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "10:10:00",
+    "notes": "",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-18T18:37:50.822Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:37:50.822Z",
+    "updated_by": "",
+    "patient": 17,
+    "doctor": 6,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "10:00:00",
+    "notes": "",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-18T18:38:04.906Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:38:04.906Z",
+    "updated_by": "",
+    "patient": 18,
+    "doctor": 7,
+    "appointment_date": "2025-07-22",
+    "appointment_time": "09:00:00",
+    "notes": "",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointment",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-18T18:38:16.014Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:38:16.014Z",
+    "updated_by": "",
+    "patient": 19,
+    "doctor": 7,
+    "appointment_date": "2025-07-24",
+    "appointment_time": "14:00:00",
+    "notes": "",
+    "status": "pending",
+    "consultation_fee": "500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.monthlyreport",
+  "pk": 1,
+  "fields": {
+    "created_at": "2025-07-18T18:44:59.456Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:44:59.456Z",
+    "updated_by": "",
+    "doctor": 6,
+    "year": 2025,
+    "month": 6,
+    "total_appointments": 18,
+    "total_patients": 15,
+    "total_earnings": "9000.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.monthlyreport",
+  "pk": 2,
+  "fields": {
+    "created_at": "2025-07-18T18:44:59.456Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:44:59.456Z",
+    "updated_by": "",
+    "doctor": 7,
+    "year": 2025,
+    "month": 5,
+    "total_appointments": 12,
+    "total_patients": 10,
+    "total_earnings": "6000.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.monthlyreport",
+  "pk": 3,
+  "fields": {
+    "created_at": "2025-07-18T18:44:59.456Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:44:59.456Z",
+    "updated_by": "",
+    "doctor": 8,
+    "year": 2025,
+    "month": 4,
+    "total_appointments": 20,
+    "total_patients": 18,
+    "total_earnings": "10800.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.monthlyreport",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-18T18:44:59.456Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:44:59.456Z",
+    "updated_by": "",
+    "doctor": 9,
+    "year": 2025,
+    "month": 3,
+    "total_appointments": 10,
+    "total_patients": 9,
+    "total_earnings": "4500.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.monthlyreport",
+  "pk": 5,
+  "fields": {
+    "created_at": "2025-07-18T18:44:59.456Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:44:59.456Z",
+    "updated_by": "",
+    "doctor": 10,
+    "year": 2025,
+    "month": 2,
+    "total_appointments": 14,
+    "total_patients": 14,
+    "total_earnings": "9800.00"
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointmentreminder",
+  "pk": 6,
+  "fields": {
+    "created_at": "2025-07-18T18:48:24.814Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:48:24.814Z",
+    "updated_by": "",
+    "appointment": 8,
+    "reminder_type": "24_hours",
+    "sent_at": "2025-07-18T18:48:24.814Z",
+    "is_sent": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointmentreminder",
+  "pk": 7,
+  "fields": {
+    "created_at": "2025-07-18T18:48:24.814Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:48:24.814Z",
+    "updated_by": "",
+    "appointment": 2,
+    "reminder_type": "24_hours",
+    "sent_at": "2025-07-18T18:48:24.814Z",
+    "is_sent": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointmentreminder",
+  "pk": 8,
+  "fields": {
+    "created_at": "2025-07-18T18:48:24.814Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:48:24.814Z",
+    "updated_by": "",
+    "appointment": 3,
+    "reminder_type": "24_hours",
+    "sent_at": "2025-07-18T18:48:24.814Z",
+    "is_sent": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointmentreminder",
+  "pk": 9,
+  "fields": {
+    "created_at": "2025-07-18T18:48:24.814Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:48:24.814Z",
+    "updated_by": "",
+    "appointment": 4,
+    "reminder_type": "24_hours",
+    "sent_at": "2025-07-18T18:48:24.814Z",
+    "is_sent": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.appointmentreminder",
+  "pk": 10,
+  "fields": {
+    "created_at": "2025-07-18T18:48:24.814Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T18:48:24.814Z",
+    "updated_by": "",
+    "appointment": 5,
+    "reminder_type": "24_hours",
+    "sent_at": "2025-07-18T18:48:24.814Z",
+    "is_sent": true
+  }
+},
+{
+  "model": "appointment_booking_system_app.token",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-18T17:00:11.886Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T17:00:11.886Z",
+    "updated_by": "",
+    "user": 2,
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUyOTQ0NDExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJhY2Nlc3MifQ.UCHZ-FLnBz38H4FTYrH3FdB6WPWSSxJfWQI7R-4i2WM",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUzNDYyODExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.Azrm6860LNF7dWyJzWNIZiHFXaMb6O2jm6ZXyzDCrBc",
+    "user_agent": "PostmanRuntime",
+    "ip_address": "127.0.0.1",
+    "platform": "Other"
+  }
+},
+{
+  "model": "appointment_booking_system_app.cachetoken",
+  "pk": 4,
+  "fields": {
+    "created_at": "2025-07-18T17:00:11.996Z",
+    "created_by": "dev",
+    "updated_at": "2025-07-18T17:00:11.996Z",
+    "updated_by": "",
+    "user": 2,
+    "token_key": 4,
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUyOTQ0NDExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJhY2Nlc3MifQ.UCHZ-FLnBz38H4FTYrH3FdB6WPWSSxJfWQI7R-4i2WM"
+  }
+}
+]

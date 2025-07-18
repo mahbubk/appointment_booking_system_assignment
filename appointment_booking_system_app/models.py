@@ -1,10 +1,6 @@
 """
 Defines the core data models for user roles and activity in the appointment booking system.
 
-Includes:
-- Administrative units: Division, District, Thana
-- User model with role-based access
-
 Each model maps to a database table and includes relationships for structured querying.
 """
 
@@ -47,7 +43,7 @@ class Time(models.Model):
 class Division(Time):
     """Represents a top-level administrative division (e.g., a state or province)."""
 
-    name = models.TextField()
+    name = models.TextField(max_length=25, unique=True)
 
     def __str__(self):
         """Return a human-readable string representation of the model instance."""
@@ -57,7 +53,7 @@ class Division(Time):
 class District(Time):
     """Represents a subdivision within a Division."""
 
-    name = models.TextField()
+    name = models.TextField(max_length=25, unique=True)
     division = models.ForeignKey(
         Division, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -75,7 +71,7 @@ class District(Time):
 class Thana(Time):
     """Represents a police precinct within a District."""
 
-    name = models.TextField()
+    name = models.TextField(max_length=25, unique=True)
     district = models.ForeignKey(
         District, on_delete=models.SET_NULL, null=True, blank=True
     )
@@ -120,7 +116,7 @@ class User(Time):
     )
     thana = models.ForeignKey(Thana, on_delete=models.SET_NULL, null=True, blank=True)
     license_number = models.CharField(max_length=50, unique=True, null=True, blank=True)
-    experience_years = models.CharField(blank=True, null=True)
+    experience_years = models.PositiveIntegerField(null=True, blank=True)
     consultation_fee = models.DecimalField(
         max_digits=10, decimal_places=2, default=0.00
     )
@@ -151,16 +147,14 @@ class Specialization(Time):
 
 
 class DoctorProfile(Time):
-    user = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-    )
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     specialization = models.ForeignKey(
         Specialization, on_delete=models.SET_NULL, null=True, blank=True
     )
+    time_slots = models.ManyToManyField(
+        "TimeSlot", related_name="doctor_profiles", blank=True
+    )
     bio = models.TextField(blank=True)
-    location = models.CharField(max_length=255, blank=True)
-    is_available = models.BooleanField(default=True)
 
     def __str__(self):
         return f"Dr. {self.user.fullname}"
@@ -168,24 +162,26 @@ class DoctorProfile(Time):
 
 class TimeSlot(Time):
     WEEKDAY_CHOICES = [
-        (0, "Friday"),
-        (1, "Saturday"),
-        (2, "Sunday"),
-        (3, "Monday"),
-        (4, "Tuesday"),
-        (5, "Wednesday"),
-        (6, "Thursday"),
+        (0, "Monday"),
+        (1, "Tuesday"),
+        (2, "Wednesday"),
+        (3, "Thursday"),
+        (4, "Friday"),
+        (5, "Saturday"),
+        (6, "Sunday"),
     ]
-
-
 
     doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
     weekday = models.IntegerField(choices=WEEKDAY_CHOICES)
     start_time = models.TimeField()
     end_time = models.TimeField()
+    is_available = models.BooleanField(default=True)
 
     class Meta:
-        unique_together = ["doctor", "weekday", "start_time", "end_time"]
+        unique_together = [
+            "doctor",
+            "weekday",
+        ]
         ordering = ["weekday", "start_time"]
 
 
@@ -197,13 +193,9 @@ class Appointment(Time):
         ("completed", "Completed"),
     ]
 
-    patient = models.ForeignKey(
-        User,
-        on_delete=models.CASCADE,
-    )
+    patient = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
     doctor = models.ForeignKey(
-        DoctorProfile,
-        on_delete=models.CASCADE,
+        DoctorProfile, on_delete=models.SET_NULL, null=True, blank=True
     )
     appointment_date = models.DateField()
     appointment_time = models.TimeField()
@@ -214,10 +206,6 @@ class Appointment(Time):
         max_digits=10, decimal_places=2, null=True, blank=True
     )
 
-    class Meta:
-        ordering = ["-appointment_date", "-appointment_time"]
-        unique_together = ["doctor", "appointment_date", "appointment_time"]
-
     def __str__(self):
         return (
             f"{self.patient.fullname} -> Dr. {self.doctor.user.fullname} "
@@ -225,30 +213,10 @@ class Appointment(Time):
         )
 
 
-class AppointmentStatusLog(Time):
-    """Track appointment status changes"""
-
-    appointment = models.ForeignKey(
-        Appointment,
-        on_delete=models.CASCADE,
-    )
-    previous_status = models.CharField(max_length=10, blank=True)
-    new_status = models.CharField(max_length=10)
-    changed_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    reason = models.TextField(blank=True)
-    timestamp = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.appointment}: {self.previous_status} -> {self.new_status}"
-
-    class Meta:
-        ordering = ["-timestamp"]
-
-
 class MonthlyReport(Time):
     """Monthly reports for doctors"""
 
-    doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
+    doctor = models.ForeignKey(DoctorProfile, on_delete=models.SET_NULL, null=True)
     year = models.IntegerField()
     month = models.IntegerField()
     total_appointments = models.IntegerField(default=0)
@@ -263,7 +231,7 @@ class MonthlyReport(Time):
         ordering = ["-year", "-month"]
 
 
-class AppointmentReminder(models.Model):
+class AppointmentReminder(Time):
     """Track appointment reminders"""
 
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
@@ -308,7 +276,7 @@ class Token(Time):
         return f"Token for {self.ip_address} on {self.platform}"
 
 
-class CacheToken(models.Model):
+class CacheToken(Time):
     """
     A model representing cached tokens for users.
 

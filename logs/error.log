@@ -1,0 +1,1911 @@
+[ERROR] 2025-07-17 17:10:40,091 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112412) already exists.
+
+[ERROR] 2025-07-17 17:10:40,092 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112412) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112412) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 573, in create
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 156, in create
+    user = super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112412) already exists.
+
+[ERROR] 2025-07-17 17:10:40,158 request_logger (40): POST /api/v1/user/register/ → 500
+[ERROR] 2025-07-17 17:10:40,161 django.request (248): Internal Server Error: /api/v1/user/register/
+[ERROR] 2025-07-17 17:10:40,163 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 500 198
+[ERROR] 2025-07-17 17:11:44,069 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112410) already exists.
+
+[ERROR] 2025-07-17 17:11:44,070 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112410) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112410) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 573, in create
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 156, in create
+    user = super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801736112410) already exists.
+
+[ERROR] 2025-07-17 17:11:44,072 request_logger (40): POST /api/v1/user/register/ → 500
+[ERROR] 2025-07-17 17:11:44,074 django.request (248): Internal Server Error: /api/v1/user/register/
+[ERROR] 2025-07-17 17:11:44,074 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 500 198
+[ERROR] 2025-07-17 19:48:38,946 request_logger (47): Exception caught: Unsupported media type "text/plain" in request.
+[ERROR] 2025-07-17 19:48:38,963 request_logger (48): Exception caught: Unsupported media type "text/plain" in request.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1387, in create
+    serializer = AppointmentSerializer(data=request.data)
+                                            ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 220, in data
+    self._load_data_and_files()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 283, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 355, in _parse
+    raise exceptions.UnsupportedMediaType(media_type)
+rest_framework.exceptions.UnsupportedMediaType: Unsupported media type "text/plain" in request.
+[ERROR] 2025-07-17 19:48:38,983 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 19:48:38,985 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 19:48:38,987 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 94
+[ERROR] 2025-07-17 19:49:25,778 request_logger (47): Exception caught: Unsupported media type "text/plain" in request.
+[ERROR] 2025-07-17 19:49:25,779 request_logger (48): Exception caught: Unsupported media type "text/plain" in request.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1387, in create
+    serializer = AppointmentSerializer(data=request.data)
+                                            ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 220, in data
+    self._load_data_and_files()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 283, in _load_data_and_files
+    self._data, self._files = self._parse()
+                              ^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/request.py", line 355, in _parse
+    raise exceptions.UnsupportedMediaType(media_type)
+rest_framework.exceptions.UnsupportedMediaType: Unsupported media type "text/plain" in request.
+[ERROR] 2025-07-17 19:49:25,781 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 19:49:25,783 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 19:49:25,784 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 94
+[ERROR] 2025-07-17 19:51:12,390 request_logger (47): Exception caught: 'DoctorProfile' object has no attribute 'time_slots'
+[ERROR] 2025-07-17 19:51:12,395 request_logger (48): Exception caught: 'DoctorProfile' object has no attribute 'time_slots'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1389, in create
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 352, in validate
+    available_slots = doctor.time_slots.filter(
+                      ^^^^^^^^^^^^^^^^^
+AttributeError: 'DoctorProfile' object has no attribute 'time_slots'. Did you mean: 'timeslot_set'?
+[ERROR] 2025-07-17 19:51:12,419 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 19:51:12,421 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 19:51:12,425 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 97
+[ERROR] 2025-07-17 20:03:17,383 request_logger (47): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:03:17,384 request_logger (48): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1389, in create
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 352, in validate
+    available_slots = doctor.time_slots.filter(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:03:17,456 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 20:03:17,458 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 20:03:17,459 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 222
+[ERROR] 2025-07-17 20:06:20,082 request_logger (47): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:06:20,084 request_logger (48): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1389, in create
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 350, in validate
+    available_slots = doctor.time_slots.filter(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:06:20,089 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 20:06:20,090 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 20:06:20,091 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 222
+[ERROR] 2025-07-17 20:15:01,122 request_logger (47): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:15:01,123 request_logger (48): Exception caught: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1389, in create
+    if serializer.is_valid():
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 353, in validate
+    if not doctor.time_slots.filter(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1491, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1303, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/query.py", line 1768, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'is_active' into field. Choices are: created_at, created_by, doctor, doctor_id, doctor_profiles, end_time, id, start_time, updated_at, updated_by, weekday
+[ERROR] 2025-07-17 20:15:01,128 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 20:15:01,129 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 20:15:01,130 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 222
+[ERROR] 2025-07-17 20:29:47,982 request_logger (47): Exception caught: 'DoctorProfile' object has no attribute 'consultation_fee'
+[ERROR] 2025-07-17 20:29:47,983 request_logger (48): Exception caught: 'DoctorProfile' object has no attribute 'consultation_fee'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1390, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 384, in create
+    "consultation_fee", validated_data["doctor"].consultation_fee
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DoctorProfile' object has no attribute 'consultation_fee'
+[ERROR] 2025-07-17 20:29:47,992 request_logger (40): POST /api/v1/appointment/create/ → 500
+[ERROR] 2025-07-17 20:29:47,993 django.request (248): Internal Server Error: /api/v1/appointment/create/
+[ERROR] 2025-07-17 20:29:47,993 django.server (213): "POST /api/v1/appointment/create/ HTTP/1.1" 500 103
+[ERROR] 2025-07-18 06:48:28,052 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:48:28,053 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:48:28,057 request_logger (40): GET /api/v1/filter/doctors/?division=1 → 500
+[ERROR] 2025-07-18 06:48:28,059 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:48:28,060 django.server (213): "GET /api/v1/filter/doctors/?division=1 HTTP/1.1" 500 131
+[ERROR] 2025-07-18 06:50:53,719 request_logger (47): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:50:53,720 request_logger (48): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1205, in filter_doctors
+    message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+                                                            ^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/relations.py", line 189, in get_attribute
+    return super().get_attribute(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:50:53,727 request_logger (40): GET /api/v1/filter/doctors/?division=1 → 500
+[ERROR] 2025-07-18 06:50:53,731 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:50:53,734 django.server (213): "GET /api/v1/filter/doctors/?division=1 HTTP/1.1" 500 327
+[ERROR] 2025-07-18 06:52:04,699 utils.handler (47): Unexpected error: syntax error at or near "%"
+LINE 4: ...ser u ON dp.user_id = u.id WHERE (u.division_id = %s) LIMIT ...
+                                                             ^
+
+[ERROR] 2025-07-18 06:52:04,704 request_logger (47): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:52:04,704 request_logger (48): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1205, in filter_doctors
+    message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+                                                            ^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/relations.py", line 189, in get_attribute
+    return super().get_attribute(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:52:04,707 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 06:52:04,708 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:52:04,709 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 327
+[ERROR] 2025-07-18 06:52:07,443 utils.handler (47): Unexpected error: syntax error at or near "%"
+LINE 4: ...ser u ON dp.user_id = u.id WHERE (u.division_id = %s) LIMIT ...
+                                                             ^
+
+[ERROR] 2025-07-18 06:52:07,448 request_logger (47): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:52:07,449 request_logger (48): Exception caught: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1205, in filter_doctors
+    message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+                                                            ^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/relations.py", line 189, in get_attribute
+    return super().get_attribute(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `str` instance.
+Original exception text was: 'str' object has no attribute 'user'.
+[ERROR] 2025-07-18 06:52:07,454 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 06:52:07,456 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:52:07,459 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 327
+[ERROR] 2025-07-18 06:57:48,023 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:57:48,024 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:57:48,027 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 06:57:48,029 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:57:48,030 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 131
+[ERROR] 2025-07-18 06:57:52,170 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:57:52,171 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 06:57:52,172 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 06:57:52,173 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 06:57:52,174 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 131
+[ERROR] 2025-07-18 07:03:28,041 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:03:28,042 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:03:28,049 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:03:28,051 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:03:28,053 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:10:26,992 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:10:26,994 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:10:27,006 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:10:27,010 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:10:27,019 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 126
+[ERROR] 2025-07-18 07:10:33,574 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:10:33,576 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:10:33,578 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:10:33,580 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:10:33,581 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 126
+[ERROR] 2025-07-18 07:11:30,832 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:30,832 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:30,835 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:11:30,837 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:11:30,839 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 126
+[ERROR] 2025-07-18 07:11:32,759 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:32,760 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:32,763 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:11:32,764 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:11:32,765 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 126
+[ERROR] 2025-07-18 07:11:39,683 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:39,684 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() got multiple values for argument 'data'
+[ERROR] 2025-07-18 07:11:39,686 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:11:39,688 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:11:39,689 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 126
+[ERROR] 2025-07-18 07:12:52,606 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:12:52,607 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:12:52,614 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:12:52,615 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:12:52,616 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:15:18,670 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:15:18,670 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:15:18,675 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:15:18,677 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:15:18,678 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:15:20,815 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:15:20,816 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:15:20,819 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:15:20,820 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:15:20,820 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:17:12,701 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:17:12,701 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:17:12,710 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:17:12,711 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:17:12,712 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:17:14,988 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:17:14,990 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:17:14,993 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:17:14,994 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:17:14,995 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:19:58,888 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:19:58,889 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:19:58,892 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:19:58,893 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:19:58,894 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:20:01,504 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:20:01,504 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:20:01,506 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:20:01,506 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:20:01,507 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:23:06,433 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:06,433 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:06,436 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:23:06,438 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:23:06,439 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:23:08,743 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:08,743 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:08,745 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:23:08,746 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:23:08,747 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:23:10,514 request_logger (47): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:10,514 request_logger (48): Exception caught: 'DoctorProfileService' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 192, in get_filter_doctors
+    specialization_id = data.get("specialization_id")
+                        ^^^^^^^^
+AttributeError: 'DoctorProfileService' object has no attribute 'get'
+[ERROR] 2025-07-18 07:23:10,516 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:23:10,517 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:23:10,518 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 97
+[ERROR] 2025-07-18 07:26:14,045 utils.handler (47): Unexpected error: column dp.is_available does not exist
+LINE 3:                        dp.bio, dp.is_available, dp.created_a...
+                                       ^
+
+[ERROR] 2025-07-18 07:26:16,059 utils.handler (47): Unexpected error: column dp.is_available does not exist
+LINE 3:                        dp.bio, dp.is_available, dp.created_a...
+                                       ^
+
+[ERROR] 2025-07-18 07:26:19,414 utils.handler (47): Unexpected error: column dp.is_available does not exist
+LINE 3:                        dp.bio, dp.is_available, dp.created_a...
+                                       ^
+
+[ERROR] 2025-07-18 07:26:25,374 utils.handler (47): Unexpected error: column dp.is_available does not exist
+LINE 3:                        dp.bio, dp.is_available, dp.created_a...
+                                       ^
+
+[ERROR] 2025-07-18 07:30:31,875 request_logger (47): Exception caught: 'DoctorProfileService' object is not callable
+[ERROR] 2025-07-18 07:30:31,875 request_logger (48): Exception caught: 'DoctorProfileService' object is not callable
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service().get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'DoctorProfileService' object is not callable
+[ERROR] 2025-07-18 07:30:31,880 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:30:31,882 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:30:31,883 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 90
+[ERROR] 2025-07-18 07:31:10,901 utils.handler (47): Unexpected error: column u.first_name does not exist
+LINE 3:                        u.first_name, u.last_name, u.email, u...
+                               ^
+
+[ERROR] 2025-07-18 07:31:49,192 utils.handler (47): Unexpected error: column u.first_name does not exist
+LINE 3:                        u.first_name, u.last_name, u.email, u...
+                               ^
+
+[ERROR] 2025-07-18 07:32:47,148 utils.handler (47): Unexpected error: column u.phone_number does not exist
+LINE 3:                        u.email, u.phone_number,
+                                        ^
+
+[ERROR] 2025-07-18 07:32:49,535 utils.handler (47): Unexpected error: column u.phone_number does not exist
+LINE 3:                        u.email, u.phone_number,
+                                        ^
+
+[ERROR] 2025-07-18 07:33:11,492 utils.handler (47): Unexpected error: missing FROM-clause entry for table "dist"
+LINE 5:                        dist.name as district_name,
+                               ^
+
+[ERROR] 2025-07-18 07:33:13,272 utils.handler (47): Unexpected error: missing FROM-clause entry for table "dist"
+LINE 5:                        dist.name as district_name,
+                               ^
+
+[ERROR] 2025-07-18 07:33:54,810 utils.handler (47): Unexpected error: syntax error at or near "FROM"
+LINE 3:                 FROM appointment_booking_system_app_doctorpr...
+                        ^
+
+[ERROR] 2025-07-18 07:33:57,118 utils.handler (47): Unexpected error: syntax error at or near "FROM"
+LINE 3:                 FROM appointment_booking_system_app_doctorpr...
+                        ^
+
+[ERROR] 2025-07-18 07:39:28,484 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 07:39:28,485 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 07:39:28,489 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:39:28,491 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:39:28,492 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 131
+[ERROR] 2025-07-18 07:39:32,744 request_logger (47): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 07:39:32,745 request_logger (48): Exception caught: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1192, in filter_doctors
+    doctor_profile_obj = doctor_profile_service.get_filter_doctors(query_params)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DoctorProfileService.get_filter_doctors() takes 1 positional argument but 2 were given
+[ERROR] 2025-07-18 07:39:32,747 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:39:32,747 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:39:32,748 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 131
+[ERROR] 2025-07-18 07:41:43,910 request_logger (47): Exception caught: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+[ERROR] 2025-07-18 07:41:43,911 request_logger (48): Exception caught: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 102, in get_attribute
+    instance = instance[attr]
+               ~~~~~~~~^^^^^^
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1205, in filter_doctors
+    message=ResponseMessages.REQUEST_SUCCESSFUL.value, data=serializer.data
+                                                            ^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/relations.py", line 189, in get_attribute
+    return super().get_attribute(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+[ERROR] 2025-07-18 07:41:43,916 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:41:43,917 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:41:43,918 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 298
+[ERROR] 2025-07-18 07:43:37,393 request_logger (47): Exception caught: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+[ERROR] 2025-07-18 07:43:37,394 request_logger (48): Exception caught: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 102, in get_attribute
+    instance = instance[attr]
+               ~~~~~~~~^^^^^^
+KeyError: 'user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1205, in filter_doctors
+    message=ResponseMessages.REQUEST_SUCCESSFUL.value,
+                                                       
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 714, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/relations.py", line 189, in get_attribute
+    return super().get_attribute(instance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+KeyError: "Got KeyError when attempting to get a value for field `user` on serializer `DoctorProfileSerializer`.\nThe serializer field might be named incorrectly and not match any attribute or key on the `dict` instance.\nOriginal exception text was: 'user'."
+[ERROR] 2025-07-18 07:43:37,400 request_logger (40): GET /api/v1/filter/doctors/?division_id=1 → 500
+[ERROR] 2025-07-18 07:43:37,401 django.request (248): Internal Server Error: /api/v1/filter/doctors/
+[ERROR] 2025-07-18 07:43:37,402 django.server (213): "GET /api/v1/filter/doctors/?division_id=1 HTTP/1.1" 500 298
+[ERROR] 2025-07-18 17:02:38,313 utils.handler (47): Unexpected error: relation "appointment_appointment" does not exist
+LINE 2:                 SELECT * FROM appointment_appointment
+                                      ^
+
+[ERROR] 2025-07-18 17:02:38,350 request_logger (47): Exception caught: 'data'
+[ERROR] 2025-07-18 17:02:38,351 request_logger (48): Exception caught: 'data'
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1267, in user_specific_appointments
+    appointments = doctor_profile_service.get_user_specific_appointments(user)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/repository/doctor_profile.py", line 221, in get_user_specific_appointments
+    return results["data"]
+           ~~~~~~~^^^^^^^^
+KeyError: 'data'
+[ERROR] 2025-07-18 17:02:38,354 request_logger (40): GET /api/v1/user/specific/appointments/ → 500
+[ERROR] 2025-07-18 17:02:38,356 django.request (248): Internal Server Error: /api/v1/user/specific/appointments/
+[ERROR] 2025-07-18 17:02:38,356 django.server (213): "GET /api/v1/user/specific/appointments/ HTTP/1.1" 500 51
+[ERROR] 2025-07-18 17:48:27,086 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801710000010) already exists.
+
+[ERROR] 2025-07-18 17:48:27,179 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801710000010) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801710000010) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 576, in create
+    user = serializer.save()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 157, in create
+    user = super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_user_phone_key"
+DETAIL:  Key (phone)=(+8801710000010) already exists.
+
+[ERROR] 2025-07-18 17:48:27,283 request_logger (40): POST /api/v1/user/register/ → 500
+[ERROR] 2025-07-18 17:48:27,284 django.request (248): Internal Server Error: /api/v1/user/register/
+[ERROR] 2025-07-18 17:48:27,286 django.server (213): "POST /api/v1/user/register/ HTTP/1.1" 500 198
+[ERROR] 2025-07-18 18:12:16,174 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+[ERROR] 2025-07-18 18:12:16,175 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(3) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1318, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+[ERROR] 2025-07-18 18:12:16,187 request_logger (40): POST /api/v1/time/slot/create/ → 500
+[ERROR] 2025-07-18 18:12:16,191 django.request (248): Internal Server Error: /api/v1/time/slot/create/
+[ERROR] 2025-07-18 18:12:16,192 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 500 181
+[ERROR] 2025-07-18 18:14:45,737 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+[ERROR] 2025-07-18 18:14:45,738 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(4) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1318, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_timeslot_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+[ERROR] 2025-07-18 18:14:45,772 request_logger (40): POST /api/v1/time/slot/create/ → 500
+[ERROR] 2025-07-18 18:14:45,774 django.request (248): Internal Server Error: /api/v1/time/slot/create/
+[ERROR] 2025-07-18 18:14:45,775 django.server (213): "POST /api/v1/time/slot/create/ HTTP/1.1" 500 181
+[ERROR] 2025-07-18 18:22:28,138 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(2) already exists.
+
+[ERROR] 2025-07-18 18:22:28,141 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(2) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(2) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(2) already exists.
+
+[ERROR] 2025-07-18 18:22:28,153 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:22:28,157 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:22:28,159 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:24:44,095 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+[ERROR] 2025-07-18 18:24:44,096 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(3) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(3) already exists.
+
+[ERROR] 2025-07-18 18:24:44,102 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:24:44,103 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:24:44,104 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:24:59,145 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+[ERROR] 2025-07-18 18:24:59,146 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(4) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(4) already exists.
+
+[ERROR] 2025-07-18 18:24:59,154 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:24:59,155 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:24:59,157 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:26,258 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(5) already exists.
+
+[ERROR] 2025-07-18 18:25:26,259 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(5) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(5) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(5) already exists.
+
+[ERROR] 2025-07-18 18:25:26,262 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:26,263 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:26,265 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:29,074 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(6) already exists.
+
+[ERROR] 2025-07-18 18:25:29,075 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(6) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(6) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(6) already exists.
+
+[ERROR] 2025-07-18 18:25:29,078 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:29,079 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:29,080 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:30,079 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(7) already exists.
+
+[ERROR] 2025-07-18 18:25:30,080 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(7) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(7) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(7) already exists.
+
+[ERROR] 2025-07-18 18:25:30,082 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:30,083 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:30,084 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:31,054 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(8) already exists.
+
+[ERROR] 2025-07-18 18:25:31,054 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(8) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(8) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(8) already exists.
+
+[ERROR] 2025-07-18 18:25:31,058 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:31,059 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:31,059 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:31,960 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(9) already exists.
+
+[ERROR] 2025-07-18 18:25:31,961 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(9) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(9) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(9) already exists.
+
+[ERROR] 2025-07-18 18:25:31,965 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:31,966 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:31,967 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 186
+[ERROR] 2025-07-18 18:25:32,870 request_logger (47): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(10) already exists.
+
+[ERROR] 2025-07-18 18:25:32,871 request_logger (48): Exception caught: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(10) already exists.
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(10) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/utils/exception_handler.py", line 65, in wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/views.py", line 1067, in create
+    serializer.save()
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/appointment_booking_system_app/serializers.py", line 252, in create
+    return super().create(validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/mk/My_Zone/Job Assignment Project/appointment_booking_system/venv/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "appointment_booking_system_app_doctorprofile_pkey"
+DETAIL:  Key (id)=(10) already exists.
+
+[ERROR] 2025-07-18 18:25:32,874 request_logger (40): POST /api/v1/doctor/profile/create/ → 500
+[ERROR] 2025-07-18 18:25:32,875 django.request (248): Internal Server Error: /api/v1/doctor/profile/create/
+[ERROR] 2025-07-18 18:25:32,876 django.server (213): "POST /api/v1/doctor/profile/create/ HTTP/1.1" 500 187
