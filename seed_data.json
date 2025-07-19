@@ -2919,33 +2919,5 @@
     "is_sent": true
   }
 },
-{
-  "model": "appointment_booking_system_app.token",
-  "pk": 4,
-  "fields": {
-    "created_at": "2025-07-18T17:00:11.886Z",
-    "created_by": "dev",
-    "updated_at": "2025-07-18T17:00:11.886Z",
-    "updated_by": "",
-    "user": 2,
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUyOTQ0NDExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJhY2Nlc3MifQ.UCHZ-FLnBz38H4FTYrH3FdB6WPWSSxJfWQI7R-4i2WM",
-    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUzNDYyODExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJyZWZyZXNoIn0.Azrm6860LNF7dWyJzWNIZiHFXaMb6O2jm6ZXyzDCrBc",
-    "user_agent": "PostmanRuntime",
-    "ip_address": "127.0.0.1",
-    "platform": "Other"
-  }
-},
-{
-  "model": "appointment_booking_system_app.cachetoken",
-  "pk": 4,
-  "fields": {
-    "created_at": "2025-07-18T17:00:11.996Z",
-    "created_by": "dev",
-    "updated_at": "2025-07-18T17:00:11.996Z",
-    "updated_by": "",
-    "user": 2,
-    "token_key": 4,
-    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6Im1haHViIiwiZXhwIjoxNzUyOTQ0NDExLCJpYXQiOjE3NTI4NTgwMTEsInRva2VuX3R5cGUiOiJhY2Nlc3MifQ.UCHZ-FLnBz38H4FTYrH3FdB6WPWSSxJfWQI7R-4i2WM"
-  }
-}
+
 ]
